@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-11-15T00:50:30.423Z",
+  "tests": {
+    "tokenization": {
+      "name": "Enhanced Tokenization",
+      "iterations": 5,
+      "avg": "2.46ms",
+      "min": "1.79ms",
+      "max": "4.94ms",
+      "median": "1.83ms",
+      "total": "12.32ms"
+    },
+    "similarity": {
+      "name": "Similarity Calculations",
+      "iterations": 3,
+      "avg": "0.41ms",
+      "min": "0.19ms",
+      "max": "0.84ms",
+      "median": "0.19ms",
+      "total": "1.23ms"
+    },
+    "segmentation": {
+      "name": "Event Segmentation",
+      "iterations": 3,
+      "avg": "4.64ms",
+      "min": "3.48ms",
+      "max": "6.79ms",
+      "median": "3.65ms",
+      "total": "13.92ms"
+    },
+    "memory": {
+      "heapUsedMB": "6.00",
+      "externalMB": "0.00",
+      "eventsProcessed": 3000
+    }
+  }
+}

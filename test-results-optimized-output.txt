@@ -1,0 +1,61 @@
+
+╔════════════════════════════════════════════════════════════╗
+║       LOGSLIMMER PERFORMANCE TEST SUITE                   ║
+║       Baseline measurements for optimization              ║
+╚════════════════════════════════════════════════════════════╝
+  
+
+📊 TOKENIZATION PERFORMANCE TEST
+==================================================
+
+✅ Tokenized 800 strings per iteration
+   name: Enhanced Tokenization
+   iterations: 5
+   avg: 1.84ms
+   min: 1.47ms
+   max: 3.27ms
+   median: 1.50ms
+   total: 9.22ms
+    
+
+📊 SIMILARITY CALCULATION PERFORMANCE TEST
+==================================================
+
+✅ Completed similarity comparisons
+   name: Similarity Calculations
+   iterations: 3
+   avg: 0.36ms
+   min: 0.18ms
+   max: 0.72ms
+   median: 0.18ms
+   total: 1.09ms
+    
+
+📊 EVENT SEGMENTATION PERFORMANCE TEST
+==================================================
+
+✅ Event segmentation completed
+   name: Event Segmentation
+   iterations: 3
+   avg: 4.07ms
+   min: 3.14ms
+   max: 5.84ms
+   median: 3.21ms
+   total: 12.20ms
+    
+
+💾 MEMORY USAGE SNAPSHOT
+==================================================
+
+✅ Memory snapshot captured
+   Heap used: 5.97 MB
+   External: 0.00 MB
+   Events processed: 3000
+    
+
+╔════════════════════════════════════════════════════════════╗
+║       ALL TESTS COMPLETED ✅                              ║
+╚════════════════════════════════════════════════════════════╝
+    
+
+📁 Results saved to: test-results.json
