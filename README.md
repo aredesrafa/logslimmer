@@ -1,19 +1,24 @@
 # LogSlimmer
 
-Compress console and terminal logs for AI agents with 90% reduction while preserving relevant information.
+Token-first log compression and timeline recaps that keep autonomous agents efficient.
 
 ![Svelte](https://img.shields.io/badge/Svelte-4-FF3E00?style=flat-square&logo=svelte)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-## Why LogSlimmer?
+LogSlimmer ships two instant pipelines:
 
-When developing with AI agents, you need to share logs efficiently:
+- **LogSlimmer** — compresses raw console or terminal streams while preserving actionable context.
+- **LogRecap** — turns multi-turn agent transcripts into a compact, navigable recap.
 
-- **Save tokens**: Reduce logs by ~90% on complex outputs (100k+ tokens)
-- **Focus on what matters**: Intelligent clustering keeps only relevant information
-- **No manual filtering**: AI agents get clean, compressed logs automatically
-- **Fast processing**: Works with browser console and terminal logs instantly
+Both engines are purpose-built to **save tokens for downstream agents**. Inputs up to **100k tokens process in milliseconds**, so you can keep iterating without throttling your context window.
+
+## Why LogSlimmer & LogRecap?
+
+- **Aggressive token savings**: Typical reductions stay above 90% even on noisy logs.
+- **Signal over noise**: Pattern-aware clustering and heuristics surface the actions, errors, and files that matter.
+- **Hands-free workflows**: Paste text, drop a file, or run the CLI — the pipelines auto-clean and dedupe for you.
+- **Consistent speed**: Browser-friendly workers deliver instantaneous feedback for large pastes.
 
 ## Quick Start
 
@@ -33,59 +38,63 @@ pnpm build
 pnpm preview
 ```
 
-## How It Works
+## Pipelines
 
-**Two pipelines:**
+### LogSlimmer (Token Compression)
+- Detects structural patterns, stack traces, diffs, and repetitions automatically.
+- Collapses redundant blocks while keeping representative examples.
+- Counts tokens so you can compare before/after usage instantly.
 
-1. **Log Mode** – Fast, pattern-based clustering
-   - Detects log structures automatically
-   - Groups similar logs by patterns, tokens, and hierarchy
-   - Perfect for quick processing and lightweight diff reviews
-
-2. **Recap Mode** – Agent log recap
-   - Purpose-built for coding agent transcripts
-   - Builds a timeline of investigations, fixes, and issues
-   - Emits a Markdown recap compatible with LogSlimmer’s CLI and UI
+### LogRecap (Agent Timeline)
+- Parses coding-agent transcripts into a chronological storyline.
+- Tracks files, issues, commands, and decisions for quick playback.
+- Emits Markdown recaps suitable for pasting back into agent chats or storing alongside artifacts.
 
 ## Features
 
-- 📊 **Intelligent clustering** - Groups similar logs automatically
-- 🎯 **Token counting** - See exactly how much you save
-- 📁 **File upload** - Drag & drop or select files
-- 🌙 **Dark/Light theme** - Persisted preferences
-- ⚡ **Real-time processing** - Instant feedback while typing
-- 📋 **One-click copy** - Copy results with visual feedback
+- 📊 **Structural clustering** — groups repetitions, diff chunks, and stack traces automatically.
+- 🧠 **Agent-focused recap** — LogRecap rebuilds investigation timelines for long-running sessions.
+- 🎯 **Token accounting** — live counters show original vs. compressed usage.
+- 📁 **Flexible ingestion** — paste, drag & drop, or call the CLI helpers under `src/cli/`.
+- 🌙 **Themable UI** — light/dark modes with persisted preferences.
+- ⚡ **Instant feedback** — browser workers keep processing interactive even on six-figure token inputs.
 
 ## Project Structure
 
 ```
 src/
-├── App.svelte                          # Main application
-├── log-processor.js                    # Parse and normalize logs
-├── cluster-builder-no-embeddings.js    # Pattern-based clustering
-├── hierarchical-clusterer.js           # Multi-level grouping
-├── structural-patterns.js              # Regex pattern detection
-├── enhanced-tokenizer.js               # Intelligent tokenization
-├── similarity-utils.js                 # Similarity calculations
-├── output-formatter.js                 # Format results
-└── config.js                           # Global configuration
+├── App.svelte                 # Main Svelte interface
+├── app.css
+├── cli/                       # CLI entry points (LogSlimmer & LogRecap)
+├── config.js                  # Shared configuration flags
+├── log-pipeline/              # LogSlimmer compression pipeline
+│   ├── cluster-builder-no-embeddings.js
+│   ├── config-clustering.js
+│   ├── core/
+│   └── …
+├── log-recap/                 # LogRecap timeline pipeline
+│   └── pipeline.js
+├── utils/                     # Tokenizers, caches, shared helpers
+├── worker-logslimmer.js       # Worker for LogSlimmer
+├── worker-logrecap.js         # Worker for LogRecap
+└── main.ts
 ```
 
 ## Usage Example
 
-**Input:** 150,000 token complex error logs
-**Log Mode Output:** 15,000 tokens (~90% reduction)
-**Recap Mode Output:** Timeline digest for coding agent conversations
+**Input:** 120,000 token debugging session
+**LogSlimmer Output:** 10,500 tokens (~91% reduction)
+**LogRecap Output:** Markdown recap listing investigations, fixes, and unresolved issues
 
 Paste your logs and get a clean, compressed version ready for AI agents.
 
 ## Performance
 
-| Size | Log Mode |
-|------|----------|
-| < 10k tokens | Instant |
-| 10-100k tokens | < 500ms |
-| 100k+ tokens | < 2s |
+| Input Size | LogSlimmer | LogRecap |
+|------------|------------|----------|
+| < 10k tokens | Instant | Instant |
+| 10k–100k tokens | Instant (<100 ms) | Instant (<100 ms) |
+| 100k–200k tokens | < 1 s | < 1 s |
 
 ## Settings
 
