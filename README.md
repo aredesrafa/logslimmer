@@ -4,7 +4,11 @@ Token-first log compression and timeline recaps that keep autonomous agents effi
 
 ![Svelte](https://img.shields.io/badge/Svelte-4-FF3E00?style=flat-square&logo=svelte)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-squar
+[![Demo](https://img.shields.io/badge/Live%20Demo-LogSlimmer-blue)](https://aredesrafa.github.io/logslimmer/)  
+➡️ **Quer ajudar a moldar o LogSlimmer?** [Participe das discussões](https://github.com/aredesrafa/logslimmer/discussions) e deixe um feedback.  
+⭐ Se achar útil, considere dar uma estrela ao repositório — isso ajuda muito.
+e)
 
 LogSlimmer ships two instant pipelines:
 
