@@ -1,13 +1,14 @@
 {
   "name": "logslimmer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "test:logrecap": "node tests/logrecap.performance.mjs",
     "test:logslimmer": "node tests/logslimmer.performance.mjs",
-    "test": "npm run test:logrecap && npm run test:logslimmer"
+    "test": "npm run test:logrecap && npm run test:logslimmer",
+    "dump:config": "node scripts/dump-default-config.mjs"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.0",

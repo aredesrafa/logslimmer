@@ -1,6 +1,5 @@
 import {
   newlineRegex,
-  noisePatterns,
   placeholderRules,
   CATEGORY_RULES,
   timestampRegex,
@@ -11,6 +10,13 @@ import {
   jwtRegex,
   emailRegex
 } from '../config.js'
+import { logPipelineConfig } from './pipeline-config.js'
+
+const NOISE_PATTERNS = logPipelineConfig.noisePatterns
+const MESSAGE_WEIGHTS = logPipelineConfig.messageWeights
+const LATENCY_BUCKETS = logPipelineConfig.latencyBuckets
+const STATUS_WEIGHTS = logPipelineConfig.statusWeights
+const DEBUG_SCORE = logPipelineConfig.debugScore
 
 export function redactSensitiveData(lines) {
   return lines.map(line => {
@@ -53,7 +59,7 @@ export function normalizeLine(line) {
 }
 
 export function isNoise(line) {
-  return noisePatterns.some((pattern) => pattern.test(line))
+  return NOISE_PATTERNS.some((pattern) => pattern.test(line))
 }
 
 export function stackTraceSignature(lines) {
@@ -134,31 +140,66 @@ export function structuralSignature(lines) {
     .join('\n')
 }
 
-export function lineScore(line) {
+export function lineScore(line, debugCollector) {
   let score = 0
-  if (/error|fail|exception|timed out|denied/i.test(line)) score += 3
-  if (/\b5\d{2}\b/.test(line)) {
-    score += 3
-  } else if (/\b(401|403)\b/.test(line)) {
-    score += 2
+  const record = (delta, reason) => {
+    score += delta
+    if (debugCollector) {
+      debugCollector.push({ reason, delta })
+    }
   }
-  if (/\[.*?ERROR.*?\]/i.test(line)) score += 3
-  if (/warn|deprecated/i.test(line)) score += 1
-  if (line.includes('[WORKFLOW_') || line.includes('[EditorClient]')) score += 1
-  if (/authentication|unauthorized|permission/i.test(line)) score += 1
+
+  const statusMatch = line.match(/\b([1-5]\d{2})\b/)
+  if (statusMatch) {
+    const statusCode = statusMatch[1]
+    const series = `${statusCode[0]}xx`
+    if (STATUS_WEIGHTS[statusCode] !== undefined) {
+      record(STATUS_WEIGHTS[statusCode], `status:${statusCode}`)
+    } else if (STATUS_WEIGHTS[series] !== undefined) {
+      record(STATUS_WEIGHTS[series], `status:${series}`)
+    }
+  }
+
+  const latencyMatch = line.match(/\b(\d+)ms\b/i)
+  if (latencyMatch) {
+    const ms = Number(latencyMatch[1])
+    for (const bucket of LATENCY_BUCKETS) {
+      if (ms >= bucket.minMs) {
+        record(bucket.weight, bucket.label || `latency>=${bucket.minMs}`)
+      }
+    }
+  }
+
+  for (const { regex, weight, label } of MESSAGE_WEIGHTS) {
+    if (regex.test(line)) {
+      record(weight, `message:${label || regex}`)
+    }
+  }
+
   return score
 }
 
-export function computeEventScore(lines) {
+export function computeEventScore(lines, debug = DEBUG_SCORE) {
   let score = 0
   const urls = new Set()
   const numbers = new Set()
   const tokens = new Set()
+  const debugLines = debug ? [] : null
 
   for (const line of lines) {
     if (isNoise(line)) continue
 
-    score += lineScore(line)
+    const lineDebug = debug ? [] : null
+    const delta = lineScore(line, lineDebug)
+    score += delta
+
+    if (debug && debugLines) {
+      debugLines.push({
+        line,
+        score: delta,
+        reasons: lineDebug
+      })
+    }
 
     // Extract URLs for diversity scoring
     const urlMatches = line.match(/https?:\/\/[^\s]+/gi) || []
@@ -177,6 +218,14 @@ export function computeEventScore(lines) {
   if (urls.size > 1) score += urls.size * 2  // Multiple URLs = important
   if (numbers.size > 2) score += numbers.size  // Multiple numbers = potentially important
   if (tokens.size > 10) score += Math.floor(tokens.size / 5)  // High token diversity = rich information
+
+  if (debug && typeof console !== 'undefined') {
+    console.debug('[logslimmer][score]', {
+      totalScore: score,
+      linesEvaluated: debugLines?.length || 0,
+      lineBreakdown: debugLines?.slice(0, 25) // avoid flooding console
+    })
+  }
 
   return score
 }

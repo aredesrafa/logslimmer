@@ -1,5 +1,13 @@
-// Import needed for normalizeLine
+// Import needed for normalizeLine and config
 import { normalizeLine } from './log-processor.js'
+import { logPipelineConfig } from './pipeline-config.js'
+
+// Clamp overly long lines while keeping start/end context
+export function truncateLine(line, maxLength = logPipelineConfig.maxLineLength) {
+  if (!line || line.length <= maxLength) return line
+  const keep = Math.floor(maxLength / 2)
+  return `${line.slice(0, keep)} … ${line.slice(-keep)}`
+}
 
 export function formatVariableValues(set) {
   const values = Array.from(set)
@@ -53,9 +61,9 @@ export function formatVariables(cluster, maxPlaceholders = 5) {
 export function formatCluster(cluster, index) {
   const occurrences = cluster.events.length
   const header = `### Cluster ${index + 1} (${occurrences} occurrence${occurrences > 1 ? 's' : ''})`
-  const representative = cluster.templateLines[0] || '(no template)'
+  const representative = truncateLine(cluster.templateLines[0] || '(no template)')
   const templatePreview = cluster.templateLines.slice(0, 3)
-    .map((line) => `- ${line}`)
+    .map((line) => `- ${truncateLine(line)}`)
     .join('\n') || '- (no template)'
   const variablesSection = formatVariables(cluster)
   const categories = formatCategoryList(cluster.categoryCounts)
@@ -95,7 +103,8 @@ export function annotateRepetitions(lines) {
       count += 1
     }
 
-    result.push(lines[index])
+    const truncated = truncateLine(lines[index])
+    result.push(truncated)
 
     if (count > 1) {
       result.push(
@@ -130,6 +139,7 @@ export function buildErrorSummary(clusters) {
   const sections = ['## Error Summary']
 
   for (const [category, entries] of summary.entries()) {
+    if (category === 'Other' && !logPipelineConfig.showOtherInSummary) continue
     const aggregated = new Map()
     for (const entry of entries) {
       const key = entry.template

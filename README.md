@@ -103,21 +103,22 @@ Paste your logs and get a clean, compressed version ready for AI agents.
 
 ## Settings
 
-All configurations in `src/config.js`:
+### LogSlimmer pipeline (scoring/noise/truncation)
+- Defaults live in `src/log-pipeline/pipeline-config.js`.
+- You can override via env `LOGSLIMMER_CONFIG_JSON='{"latencyBuckets":[{"minMs":800,"weight":2}],"statusWeights":{"5xx":6}}'`.
+- Or set `globalThis.LOGSLIMMER_CONFIG = { ... }` before running in-browser.
+- Debug scoring reasons: `LOGSLIMMER_DEBUG_SCORE=true`.
+- Dump defaults + resolved config: `npm run dump:config`.
 
-```javascript
-{
-  clustering: {
-    useHierarchical: true,
-    useEnhancedTokenizer: true,
-    usePatternDetection: true
-  },
-  processing: {
-    maxLogs: 50000,
-    debounceDelay: 500
-  }
-}
-```
+Key fields:
+- `latencyBuckets`: list of `{ minMs, weight, label }` applied cumulatively.
+- `statusWeights`: per-series (`2xx`, `4xx`, `5xx`) and optional per-code (`404`).
+- `messageWeights`: regex → weight; keep it short for performance.
+- `noisePatterns`: regex list to discard early (health/heartbeat/etc.).
+- `maxLineLength`: clamp long lines when rendering.
+- `showOtherInSummary`: include/exclude category `Other` in summary.
+- `scoreCutoffNonOther` / `scoreCutoffOther`: minimum score to keep events.
+- `maxOtherClusters` / `maxClusters`: limits for rendered clusters.
 
 ## Dependencies
 

@@ -1,6 +1,7 @@
 import { splitIntoEvents } from './log-pipeline/log-processor.js'
 import { buildClustersNoEmbeddings } from './log-pipeline/cluster-builder-no-embeddings.js'
 import { buildErrorSummary, formatCluster } from './log-pipeline/output-formatter.js'
+import { logPipelineConfig } from './log-pipeline/pipeline-config.js'
 
 console.log('[worker] Worker script evaluating...')
 
@@ -62,8 +63,14 @@ async function compressLog(inputText = '') {
     console.log('[worker] Events parsed:', events.length)
   }
 
-  const relevantEvents = events.filter((event) =>
-    event && (event.score >= 0 || (event.primaryCategory && event.primaryCategory !== 'Other'))
+  const relevantEvents = events.filter(
+    (event) =>
+      event &&
+      (
+        event.primaryCategory && event.primaryCategory !== 'Other'
+          ? event.score > logPipelineConfig.scoreCutoffNonOther
+          : event.score > logPipelineConfig.scoreCutoffOther
+      )
   )
   if (typeof console !== 'undefined') {
     console.log('[worker] Relevant events:', relevantEvents.length)
@@ -79,16 +86,27 @@ async function compressLog(inputText = '') {
     console.log('[worker] Clusters built:', clusters.length)
   }
 
-  const summary = buildErrorSummary(clusters)
+  const nonOtherClusters = clusters.filter((cluster) => cluster.primaryCategory !== 'Other')
+  const otherClusters = clusters.filter((cluster) => cluster.primaryCategory === 'Other')
+  const limitedOther = otherClusters.slice(0, logPipelineConfig.maxOtherClusters)
+  const filteredClusters = [...nonOtherClusters, ...limitedOther]
+
+  if (typeof console !== 'undefined' && otherClusters.length > limitedOther.length) {
+    console.log('[worker] Other clusters trimmed:', {
+      kept: limitedOther.length,
+      dropped: otherClusters.length - limitedOther.length
+    })
+  }
+
+  const summary = buildErrorSummary(filteredClusters)
   if (typeof console !== 'undefined') {
     console.log('[worker] Summary built, length:', summary.length)
   }
 
-  const maxClusters = 20
-  const clustersToRender = clusters.slice(0, maxClusters)
+  const clustersToRender = filteredClusters.slice(0, logPipelineConfig.maxClusters)
   const clusterBlocks = clustersToRender.map(formatCluster)
-  if (clusters.length > maxClusters) {
-    clusterBlocks.push(`… (${clusters.length - maxClusters} additional clusters omitted)\n`)
+  if (filteredClusters.length > logPipelineConfig.maxClusters) {
+    clusterBlocks.push(`… (${filteredClusters.length - logPipelineConfig.maxClusters} additional clusters omitted)\n`)
   }
   const clustersSection = clusterBlocks.join('\n\n')
 
