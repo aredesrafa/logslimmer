@@ -17,6 +17,11 @@ const MESSAGE_WEIGHTS = logPipelineConfig.messageWeights
 const LATENCY_BUCKETS = logPipelineConfig.latencyBuckets
 const STATUS_WEIGHTS = logPipelineConfig.statusWeights
 const DEBUG_SCORE = logPipelineConfig.debugScore
+const KEEP_FILE_LINE_PREFIX = logPipelineConfig.keepFileLinePrefix
+const PRESERVE_TIMESTAMPS = logPipelineConfig.preserveTimestamps
+const KEEP_HUMAN_NOTES = logPipelineConfig.keepHumanNotes
+const STACK_PREVIEW_HEAD = logPipelineConfig.stackFramePreviewHead
+const STACK_PREVIEW_TAIL = logPipelineConfig.stackFramePreviewTail
 
 export function redactSensitiveData(lines) {
   return lines.map(line => {
@@ -44,7 +49,9 @@ export function normalizeLine(line) {
   normalized = normalized.replace(/tenantId: [\w-]+/g, 'tenantId: ID')
   normalized = normalized.replace(/flowVersionId: [\w-]+/g, 'flowVersionId: ID')
   normalized = normalized.replace(/timestamp: \d+/g, 'timestamp: TIMESTAMP')
-  normalized = normalized.replace(timestampRegex, 'TIMESTAMP')
+  if (!PRESERVE_TIMESTAMPS) {
+    normalized = normalized.replace(timestampRegex, 'TIMESTAMP')
+  }
   normalized = normalized.replace(uuidRegex, 'UUID')
   normalized = normalized.replace(ipRegex, 'IP')
   normalized = normalized.replace(longHexRegex, 'HEX')
@@ -60,6 +67,19 @@ export function normalizeLine(line) {
 
 export function isNoise(line) {
   return NOISE_PATTERNS.some((pattern) => pattern.test(line))
+}
+
+export function isHumanNote(line) {
+  if (!line) return false
+  const trimmed = line.trim()
+  if (!trimmed) return false
+  // Heuristics: free text, first-person hints, accented chars, lacks HTTP verb/status noise
+  const hasAccent = /[áàâãéêíîóôõúç]/i.test(trimmed)
+  const firstPerson = /\b(eu|minha|minhas|meu|meus|nossa|nosso|gente)\b/i.test(trimmed)
+  const looksHttp = /^(GET|POST|PUT|DELETE|PATCH|OPTIONS|HEAD)\s/i.test(trimmed)
+  const looksStatus = /\b[1-5]\d{2}\b/.test(trimmed)
+  const hasSentenceLength = trimmed.split(/\s+/).length >= 5
+  return (hasAccent || firstPerson || hasSentenceLength) && !looksHttp && !looksStatus
 }
 
 export function stackTraceSignature(lines) {
@@ -78,7 +98,25 @@ export function foldStackTrace(lines) {
   const flushBuffer = () => {
     if (buffer.length > 0) {
       const signature = stackTraceSignature(buffer)
-      result.push(`[STACKTRACE ${signature}] × ${buffer.length}`)
+      const headCount = Math.max(0, STACK_PREVIEW_HEAD)
+      const tailCount = Math.max(0, STACK_PREVIEW_TAIL)
+      const keepAll = buffer.length <= headCount + tailCount || (headCount === 0 && tailCount === 0)
+
+      if (keepAll) {
+        result.push(...buffer)
+      } else {
+        const head = buffer.slice(0, headCount)
+        const tail = tailCount > 0 ? buffer.slice(-tailCount) : []
+        const omitted = buffer.length - head.length - tail.length
+        result.push(`[STACKTRACE ${signature}] (${buffer.length} frames)`)
+        result.push(...head)
+        if (omitted > 0) {
+          result.push(`… (${omitted} frames omitted)`)
+        }
+        if (tail.length > 0) {
+          result.push(...tail)
+        }
+      }
       buffer = []
     }
   }
@@ -174,6 +212,10 @@ export function lineScore(line, debugCollector) {
     if (regex.test(line)) {
       record(weight, `message:${label || regex}`)
     }
+  }
+
+  if (KEEP_HUMAN_NOTES && isHumanNote(line)) {
+    record(2, 'human-note')
   }
 
   return score
@@ -300,18 +342,25 @@ export function splitIntoEvents(inputText) {
   const lines = inputText.split(newlineRegex)
   const events = []
   let current = []
+  let order = 0
 
   for (const line of lines) {
     if (eventBoundary(line, current.length > 0)) {
       const event = createEvent(current)
-      if (event) events.push(event)
+      if (event) {
+        event.order = order++
+        events.push(event)
+      }
       current = []
     }
     current.push(line)
   }
 
   const finalEvent = createEvent(current)
-  if (finalEvent) events.push(finalEvent)
+  if (finalEvent) {
+    finalEvent.order = order++
+    events.push(finalEvent)
+  }
 
   return events
 }

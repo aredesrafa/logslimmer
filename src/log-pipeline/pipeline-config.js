@@ -31,6 +31,12 @@ const DEFAULT_PIPELINE_CONFIG = {
   scoreCutoffOther: 0,
   maxOtherClusters: 5,
   maxClusters: 20,
+  miscUniqueLimit: 3,
+  keepFileLinePrefix: true,
+  preserveTimestamps: false,
+  keepHumanNotes: true,
+  stackFramePreviewHead: 2,
+  stackFramePreviewTail: 1,
   debugScore: false
 }
 
@@ -145,6 +151,12 @@ function normalizeScoreCutoff(value, fallback) {
   return num
 }
 
+function normalizePositiveInt(value, fallback) {
+  const num = normalizeNumber(value, null)
+  if (!Number.isInteger(num) || num < 0) return fallback
+  return num
+}
+
 export function getLogPipelineConfig(overrides = {}) {
   const merged = {
     ...DEFAULT_PIPELINE_CONFIG,
@@ -163,6 +175,12 @@ export function getLogPipelineConfig(overrides = {}) {
     scoreCutoffOther: normalizeScoreCutoff(merged.scoreCutoffOther, DEFAULT_PIPELINE_CONFIG.scoreCutoffOther),
     maxOtherClusters: normalizeNumber(merged.maxOtherClusters, DEFAULT_PIPELINE_CONFIG.maxOtherClusters),
     maxClusters: normalizeNumber(merged.maxClusters, DEFAULT_PIPELINE_CONFIG.maxClusters),
+    miscUniqueLimit: normalizeNumber(merged.miscUniqueLimit, DEFAULT_PIPELINE_CONFIG.miscUniqueLimit),
+    keepFileLinePrefix: normalizeBool(merged.keepFileLinePrefix, DEFAULT_PIPELINE_CONFIG.keepFileLinePrefix),
+    preserveTimestamps: normalizeBool(merged.preserveTimestamps, DEFAULT_PIPELINE_CONFIG.preserveTimestamps),
+    keepHumanNotes: normalizeBool(merged.keepHumanNotes, DEFAULT_PIPELINE_CONFIG.keepHumanNotes),
+    stackFramePreviewHead: normalizePositiveInt(merged.stackFramePreviewHead, DEFAULT_PIPELINE_CONFIG.stackFramePreviewHead),
+    stackFramePreviewTail: normalizePositiveInt(merged.stackFramePreviewTail, DEFAULT_PIPELINE_CONFIG.stackFramePreviewTail),
     debugScore: normalizeBool(
       merged.debugScore ?? (typeof process !== 'undefined' ? process.env.LOGSLIMMER_DEBUG_SCORE : undefined),
       DEFAULT_PIPELINE_CONFIG.debugScore

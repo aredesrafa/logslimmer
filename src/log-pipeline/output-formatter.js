@@ -2,9 +2,40 @@
 import { normalizeLine } from './log-processor.js'
 import { logPipelineConfig } from './pipeline-config.js'
 
+function extractEssentialPrefix(line) {
+  if (!line) return null
+  const httpMatch = line.match(/^\s*(GET|POST|PUT|DELETE|PATCH|OPTIONS|HEAD)\s+(\S+)\s+(\d{3}\b.*?)(?=\s|$)/i)
+  if (httpMatch) {
+    return `${httpMatch[1]} ${httpMatch[2]} ${httpMatch[3]}`.trim()
+  }
+
+  const fileLineMatch = line.match(/([A-Za-z0-9_.\-\/]+:\d+)/)
+  if (fileLineMatch) {
+    return fileLineMatch[1]
+  }
+
+  const errorMatch = line.match(/(ERROR:|Error:|Exception:)/)
+  if (errorMatch) {
+    return line.slice(0, Math.min(errorMatch.index + errorMatch[0].length + 20, logPipelineConfig.maxLineLength))
+  }
+
+  return null
+}
+
 // Clamp overly long lines while keeping start/end context
 export function truncateLine(line, maxLength = logPipelineConfig.maxLineLength) {
   if (!line || line.length <= maxLength) return line
+
+  const essential = extractEssentialPrefix(line)
+  if (essential && logPipelineConfig.keepFileLinePrefix) {
+    const remaining = maxLength - essential.length - 5
+    if (remaining > 0) {
+      const suffix = line.slice(-Math.max(10, Math.floor(remaining / 2)))
+      const middle = line.length > essential.length + suffix.length ? ' … ' : ' '
+      return `${essential}${middle}${suffix}`
+    }
+  }
+
   const keep = Math.floor(maxLength / 2)
   return `${line.slice(0, keep)} … ${line.slice(-keep)}`
 }
@@ -116,6 +147,24 @@ export function annotateRepetitions(lines) {
   }
 
   return result
+}
+
+export function formatUniqueEvents(uniqueEvents, limit = logPipelineConfig.miscUniqueLimit) {
+  if (!uniqueEvents?.length) return ''
+  const selected = uniqueEvents
+    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+    .slice(0, limit)
+
+  const lines = ['## Unique Events']
+  for (const event of selected) {
+    const sample = annotateRepetitions(event.processedLines || [])
+    const rendered = limitLines(sample, 8)
+    lines.push(`- Order ${event.order ?? '?'} | Score ${event.score ?? 0}\n${rendered}`)
+  }
+  if (uniqueEvents.length > limit) {
+    lines.push(`- … (${uniqueEvents.length - limit} additional unique events omitted)`)
+  }
+  return lines.join('\n')
 }
 
 export function buildErrorSummary(clusters) {

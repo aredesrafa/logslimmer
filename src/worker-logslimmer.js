@@ -1,6 +1,6 @@
 import { splitIntoEvents } from './log-pipeline/log-processor.js'
 import { buildClustersNoEmbeddings } from './log-pipeline/cluster-builder-no-embeddings.js'
-import { buildErrorSummary, formatCluster } from './log-pipeline/output-formatter.js'
+import { buildErrorSummary, formatCluster, formatUniqueEvents } from './log-pipeline/output-formatter.js'
 import { logPipelineConfig } from './log-pipeline/pipeline-config.js'
 
 console.log('[worker] Worker script evaluating...')
@@ -110,7 +110,13 @@ async function compressLog(inputText = '') {
   }
   const clustersSection = clusterBlocks.join('\n\n')
 
-  const result = [summary, '## Event Clusters', clustersSection]
+  const uniqueEvents = filteredClusters
+    .filter((cluster) => cluster.events.length === 1)
+    .map((cluster) => cluster.events[0])
+
+  const uniqueSection = formatUniqueEvents(uniqueEvents, logPipelineConfig.miscUniqueLimit)
+
+  const result = [summary, '## Event Clusters', clustersSection, uniqueSection]
     .filter(Boolean)
     .join('\n\n')
 

@@ -119,6 +119,11 @@ Key fields:
 - `showOtherInSummary`: include/exclude category `Other` in summary.
 - `scoreCutoffNonOther` / `scoreCutoffOther`: minimum score to keep events.
 - `maxOtherClusters` / `maxClusters`: limits for rendered clusters.
+- `miscUniqueLimit`: how many single-occurrence events to show in “Unique Events”.
+- `keepFileLinePrefix`: keep `file.ts:37` or `GET /path 500` prefixes intact even when truncating payloads.
+- `preserveTimestamps`: avoid normalizing timestamps away.
+- `keepHumanNotes`: boost/keep free-text narrative lines.
+- `stackFramePreviewHead` / `stackFramePreviewTail`: how many frames to show when collapsing stack traces.
 
 ## Dependencies
 
