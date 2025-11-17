@@ -124,6 +124,7 @@ Key fields:
 - `preserveTimestamps`: avoid normalizing timestamps away.
 - `keepHumanNotes`: boost/keep free-text narrative lines.
 - `stackFramePreviewHead` / `stackFramePreviewTail`: how many frames to show when collapsing stack traces.
+- Scoring tweaks (defaults): 2xx gets extra negative weight; repetitive CORS/claim success patterns are down-weighted; “Unique Events” only shows error/4xx/5xx/aborted/timeout or very high latency.
 
 ## Dependencies
 

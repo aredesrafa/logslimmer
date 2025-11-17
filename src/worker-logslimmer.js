@@ -110,9 +110,24 @@ async function compressLog(inputText = '') {
   }
   const clustersSection = clusterBlocks.join('\n\n')
 
+  const isRelevantUnique = (event) => {
+    const text = (event.processedLines || []).join(' ')
+    const hasErrorish = /(error|exception|aborted|timeout|denied|reset|not found|unauthorized|forbidden|syntaxerror)/i.test(text)
+    const statusMatch = text.match(/\b([1-5]\d{2})\b/)
+    const status = statusMatch ? Number(statusMatch[1]) : null
+    const latencyMatch = text.match(/\b(\d{4,})ms\b/i)
+    const latencyMs = latencyMatch ? Number(latencyMatch[1]) : 0
+    return (
+      hasErrorish ||
+      (status !== null && status >= 400) ||
+      latencyMs >= 5000
+    )
+  }
+
   const uniqueEvents = filteredClusters
     .filter((cluster) => cluster.events.length === 1)
     .map((cluster) => cluster.events[0])
+    .filter(isRelevantUnique)
 
   const uniqueSection = formatUniqueEvents(uniqueEvents, logPipelineConfig.miscUniqueLimit)
 

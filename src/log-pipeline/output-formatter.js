@@ -170,7 +170,20 @@ export function formatUniqueEvents(uniqueEvents, limit = logPipelineConfig.miscU
 export function buildErrorSummary(clusters) {
   const summary = new Map()
 
+  const isBenignSuccess = (cluster) => {
+    if (!cluster?.firstEvent) return false
+    const lines = cluster.firstEvent.processedLines || []
+    const joined = lines.join(' ')
+    const has2xx = /\b2\d{2}\b/.test(joined)
+    const hasErrorish = /(error|fail|exception|aborted|timeout|denied|reset|unauthorized|not found|500|401|403|404)/i.test(joined)
+    return has2xx && !hasErrorish
+  }
+
   for (const cluster of clusters) {
+    if (cluster.primaryCategory === 'Network' && isBenignSuccess(cluster)) {
+      // skip benign network successes in summary
+      continue
+    }
     for (const [category, count] of cluster.categoryCounts.entries()) {
       if (!summary.has(category)) {
         summary.set(category, [])

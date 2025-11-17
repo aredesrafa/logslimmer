@@ -197,6 +197,10 @@ export function lineScore(line, debugCollector) {
       record(STATUS_WEIGHTS[series], `status:${series}`)
     }
   }
+  // Extra penalty for 2xx without error tokens to avoid dominating summary
+  if (statusMatch && statusMatch[1].startsWith('2') && !/(error|fail|exception|aborted|timeout|denied|reset)/i.test(line)) {
+    record(-2, 'status:2xx-success')
+  }
 
   const latencyMatch = line.match(/\b(\d+)ms\b/i)
   if (latencyMatch) {

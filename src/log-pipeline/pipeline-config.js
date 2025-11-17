@@ -22,7 +22,8 @@ const DEFAULT_PIPELINE_CONFIG = {
     { pattern: /(warn|deprecated)/i, weight: 1, label: 'warn/deprecated' },
     { pattern: /\b(WORKFLOW_|EditorClient)\b/i, weight: 1, label: 'workflow/editor' },
     { pattern: /(authentication|unauthorized|permission)/i, weight: 1, label: 'auth' },
-    { pattern: /access granted/i, weight: -2, label: 'access granted (success)' }
+    { pattern: /access granted/i, weight: -2, label: 'access granted (success)' },
+    { pattern: /(CORS|allowing empty origin|matchesPattern: false|Connection claim succeeded|claim succeeded|check-claim)/i, weight: -3, label: 'success-noise' }
   ],
   noisePatterns: defaultNoisePatterns,
   maxLineLength: 240,

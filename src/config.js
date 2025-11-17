@@ -110,6 +110,11 @@ export const CATEGORY_RULES = [
     test: /(timeout|network|ECONN|fetch failed|DNS|socket|connection)/i
   },
   {
+    name: 'Performance',
+    priority: 12,
+    test: /(Violation|took \d+ms|performance|slow script|long task)/i
+  },
+  {
     name: 'Database',
     priority: 15,
     test: /(database|postgres|mongo|sql|prisma|query failed)/i
