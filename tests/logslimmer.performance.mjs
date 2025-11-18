@@ -3,24 +3,12 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { encodingForModel } from 'js-tiktoken'
 import { runLogSlimmerPipeline } from '../src/worker-logslimmer.js'
 import { splitIntoEvents } from '../src/log-pipeline/log-processor.js'
+import { countTokens } from './utils/performance-utils.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const projectRoot = path.resolve(__dirname, '..')
-let encoder = null
-
-function countTokens(text) {
-  if (!encoder) {
-    encoder = encodingForModel('gpt-3.5-turbo')
-  }
-  return encoder.encode(text).length
-}
-
-process.on('exit', () => {
-  if (encoder?.free) encoder.free()
-})
 
 async function runLogSlimmerTest() {
   const inputPath = path.join(__dirname, 'input-test-logslimmer.txt')

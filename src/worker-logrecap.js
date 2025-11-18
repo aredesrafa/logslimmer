@@ -1,6 +1,5 @@
 import { runLogRecapPipeline } from './log-recap/pipeline.js'
-
-console.log('[worker-logrecap] Worker script evaluating...')
+import { setupWorker } from './utils/worker-setup.js'
 
 export async function compressAgentLog(
   inputText = '',
@@ -53,19 +52,9 @@ function formatLogRecapOutput(result) {
   return lines.join('\n')
 }
 
-// Worker wiring
-if (typeof self !== 'undefined') {
-  self.postMessage({ type: 'log', data: '[worker-logrecap] script loaded' })
-
-  self.onmessage = async (event) => {
-    const { type, data, options } = event.data
-    if (type === 'compress-agent') {
-      try {
-        const result = await compressAgentLog(data, options)
-        self.postMessage({ type: 'result', data: result })
-      } catch (error) {
-        self.postMessage({ type: 'error', data: error instanceof Error ? error.message : String(error) })
-      }
-    }
-  }
-}
+setupWorker({
+  'compress-agent': compressAgentLog
+}, {
+  workerName: 'worker-logrecap',
+  timeoutMs: 90000
+})
