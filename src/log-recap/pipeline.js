@@ -8,13 +8,47 @@ const SUMMARY_ITEM_LIMIT = 6
 /**
  * Main pipeline used by worker and CLI.
  */
+function preprocessChatJson(inputText) {
+  try {
+    const parsed = JSON.parse(inputText)
+    if (parsed.version && parsed.conversation?.chatHistory) {
+      // Extract clean conversation text with markers
+      const history = parsed.conversation.chatHistory
+      const cleanText = history
+        .filter(item => item.chatItemType !== 'agentic-checkpoint-delimiter')
+        .map(item => {
+          const userMsg = (item.request_message || '').replace(/\{.*?\}/gs, '').trim()
+          const agentMsg = (item.response_text || '').replace(/\{.*?\}/gs, '').trim()
+          return `USER: ${userMsg}\nAGENT: ${agentMsg}`.trim()
+        })
+        .filter(text => text.length > 10) // Skip very short
+        .join('\n\n')
+      return cleanText || inputText
+    }
+  } catch (e) {
+    // Not JSON, return as is
+  }
+  return inputText
+}
+
 export async function runLogRecapPipeline(inputText, { maxEventsPerChunk = CHUNK_EVENT_LIMIT } = {}) {
   const start = Date.now()
 
   // 1) Pre-processing
-  const turns = segmentIntoTurns(inputText)
-  const extractor = new StructuredDigestExtractor(inputText, turns)
+  const processedText = preprocessChatJson(inputText)
+  const turns = segmentIntoTurns(processedText)
+  const extractor = new StructuredDigestExtractor(processedText, turns)
   const digest = extractor.extract()
+  // Filter low-relevance errors for chat context
+  if (digest.errorSignatures) {
+    console.log('Before filter:', digest.errorSignatures.length)
+    digest.errorSignatures = digest.errorSignatures.filter(sig => {
+      const match = /run out of credits|failed to build|exit code|npm ci|npm install/i.test(sig.toLowerCase())
+      if (match) console.log('Filtering:', sig.substring(0, 50))
+      return !match
+    })
+    console.log('After filter:', digest.errorSignatures.length)
+  }
 
   const timeline = buildEventTimeline(digest)
   const chunks = buildChunks(timeline, maxEventsPerChunk)
@@ -23,7 +57,7 @@ export async function runLogRecapPipeline(inputText, { maxEventsPerChunk = CHUNK
   const chunkSummaries = chunks.map(chunk => summarizeChunkLocally(chunk))
 
   // 3) Final synthesis
-  const finalSummary = stitchNarrativeLocally(chunkSummaries, digest)
+  const finalSummary = stitchNarrativeLocally(chunkSummaries, digest, timeline)
 
   return {
     compressed: finalSummary.text,
@@ -53,10 +87,24 @@ function buildEventTimeline(digest) {
   const briefingEvents = extractBriefingEvents(turns)
   timeline.push(...briefingEvents)
 
+  // Find last user/agent indices first
+  let lastUserIdx = -1
+  let lastAgentIdx = -1
   for (const turn of turns) {
-    if (timeline.length >= maxEvents) break
+    if (turn.text.startsWith('USER:')) lastUserIdx = Math.max(lastUserIdx, turn.idx)
+    if (turn.text.startsWith('AGENT:')) lastAgentIdx = Math.max(lastAgentIdx, turn.idx)
+  }
+
+  // Collect all potential events, prioritizing user messages and recent ones
+  const allEvents = []
+  const userEvents = []
+  for (const turn of turns) {
     const event = turnToEvent(turn)
     if (!event) continue
+
+    // Mark last user/agent
+    if (turn.idx === lastUserIdx) event.isLastUser = true
+    if (turn.idx === lastAgentIdx) event.isLastAgent = true
 
     if (event.intent === 'command') {
       const hash = `${event.intent}:${event.summary}`
@@ -64,8 +112,30 @@ function buildEventTimeline(digest) {
       commandHashes.add(hash)
     }
 
-    timeline.push(event)
+    allEvents.push(event)
+
+    // Separate user events
+    if (turn.text.startsWith('USER:')) {
+      userEvents.push(event)
+    }
   }
+
+  // Include all user events, then fill with recent non-user events
+  const includedEvents = new Set(userEvents.map(e => e.id))
+  timeline.push(...userEvents)
+
+  const remainingSlots = maxEvents - briefingEvents.length - userEvents.length
+  if (remainingSlots > 0) {
+    const nonUserEvents = allEvents.filter(e => !includedEvents.has(e.id))
+    const recentNonUser = nonUserEvents
+      .sort((a, b) => b.order - a.order)
+      .slice(0, remainingSlots)
+      .sort((a, b) => a.order - b.order)
+    timeline.push(...recentNonUser)
+  }
+
+  // Sort timeline chronologically
+  timeline.sort((a, b) => a.order - b.order)
 
   if (timeline.length === 0 && Array.isArray(digest.files)) {
     digest.files.forEach((file, idx) => {
@@ -196,19 +266,24 @@ function summarizeChunkLocally(chunk) {
   }
 }
 
-function stitchNarrativeLocally(chunkSummaries, digest) {
+function stitchNarrativeLocally(chunkSummaries, digest, timeline) {
   const lines = []
   lines.push('## Overview')
   lines.push(`Session touched ${digest.files?.length || 0} files and ${digest.errors?.length || 0} primary issues.`)
   const aggregatedGroups = aggregateGroups(chunkSummaries)
   lines.push('')
   lines.push('## Highlights')
+  // Find last user event
+  const lastUserEvent = timeline.find(e => e.isLastUser)
+  const lastUserSection = lastUserEvent ? [{ label: 'Last User Interaction', entries: [lastUserEvent.summary], limit: 1 }] : []
+
   const highlightSections = [
-    { label: 'Briefing', entries: aggregatedGroups.briefing, limit: 4 },
-    { label: 'Investigations', entries: aggregatedGroups.command, limit: 6 },
-    { label: 'Implementations', entries: aggregatedGroups.action, limit: 6 },
-    { label: 'Decisions', entries: aggregatedGroups.decision, limit: 4 },
-    { label: 'Notes', entries: aggregatedGroups.note, limit: 4 }
+    { label: 'Briefing', entries: aggregatedGroups.briefing, limit: 3 },
+    { label: 'Investigations', entries: aggregatedGroups.command, limit: 8 },
+    { label: 'Implementations', entries: aggregatedGroups.action, limit: 8 },
+    { label: 'Decisions', entries: aggregatedGroups.decision, limit: 5 },
+    { label: 'Notes', entries: aggregatedGroups.note, limit: 3 },
+    ...lastUserSection
   ]
   let highlightsAdded = false
   highlightSections.forEach(({ label, entries, limit }) => {
@@ -344,24 +419,51 @@ function extractBriefingEvents(turns) {
   return events.slice(0, 3)
 }
 
+function relevanceScorer(turn, rawText) {
+  let score = 0
+  // Boost user messages (conversational, important)
+  if (rawText.startsWith('USER:')) score += 5
+  // Files and errors are high signal
+  score += (turn.filesReferenced?.length || 0) * 2
+  score += (turn.errorSignatures?.length || 0) * 1 // Reduce error weight for chat context
+  // Action verbs indicate changes/decisions
+  const actionWords = ['add', 'create', 'update', 'delete', 'fix', 'refactor', 'run', 'change', 'modify', 'configure', 'debug', 'investigate', 'implement', 'deploy', 'test', 'connect', 'refresh', 'token']
+  score += actionWords.filter(word => rawText.toLowerCase().includes(word)).length
+  // Penalize generic errors or build failures, or low-value content
+  if (/error|exit code|failed to build|auth_expired|⚠️|you have run out of credits|here's the result/i.test(rawText.toLowerCase())) score -= 5
+  // Penalize machine-like logs
+  if (/log =>|CACHED|COPY|\.npmrc|package-lock/i.test(rawText)) score -= 2
+  // Penalize high JSON density (likely tool output)
+  const jsonMatches = rawText.match(/\{|\}|\[|\]|".*?":/g) || []
+  const jsonDensity = jsonMatches.length / Math.max(rawText.length, 1)
+  if (jsonDensity > 0.05) score -= Math.min(jsonDensity * 20, 10)
+  // Code-like content (paths, brackets)
+  if (/src\/|lib\/|\.js|\.ts/i.test(rawText)) score += 1
+  // Length bonus (longer turns often more detailed)
+  score += Math.min(rawText.length / 100, 2)
+  // Recency bonus (higher idx)
+  score += (turn.idx || 0) / 100
+  return score
+}
+
 function turnToEvent(turn) {
-  const rawText = collapseWhitespace(turn.text || '')
-  if (!rawText) return null
-  if (/resumo final sintetizado/i.test(rawText)) return null
-  if (turn.type === 'user_request' && !/^[›>]/.test(rawText)) return null
-  if (/^[›>]/.test(rawText) && turn.type !== 'user_request') return null
-  if (/^\s*•\s*i(?:\s+(?:need|see|saw|notice|noticed|plan|intend|want|should|will|also|must|can|could)|(?:['’]m|['’]d|['’]ll))/i.test(turn.text || '')) return null
-  if (/^\s*•\s*(explored|analysis)/i.test(turn.text || '')) return null
+  const rawText = turn.text || ''
+  // Clean markers for processing
+  const cleanText = rawText.replace(/^USER:\s*|^AGENT:\s*/, '').trim()
+  const score = relevanceScorer(turn, rawText)
 
-  const hasSignal =
-    (turn.filesReferenced?.length || 0) > 0 ||
-    (turn.errorSignatures?.length || 0) > 0 ||
-    /(added|created|updated|deleted|fixed|refactor|ran |error|tenant|hook|dialog|route|api|plan|doc|test|lint|deploy|schema|apollo|payload)/i.test(rawText)
+  // Filter out low-signal content: JSON artifacts, tool outputs, low scores
+  const noiseRegex = /no matches found|file not found|regex search results|here's the result|note:\nend line|total lines in file|successfully edited|file saved|command completed|\{.*?\}|\[.*?\]|encrypted_content|tool_use_id|⚠️|run out of credits/i
+  if (score < 4 || noiseRegex.test(rawText)) {
+    if (rawText.startsWith('USER:')) console.log('Filtering USER turn:', rawText.substring(0, 100), 'score:', score)
+    if (noiseRegex.test(rawText)) console.log('Filtering noise:', rawText.substring(0, 50))
+    return null
+  }
 
-  if (!hasSignal) return null
-
-  const { type, intent } = normalizeEventType(turn, rawText)
-  const summary = humanizeTurnText(turn, rawText, intent)
+  const { type, intent } = normalizeEventType(turn, cleanText)
+  // Skip low-relevance errors
+  if (intent === 'error' && score < 5) return null
+  const summary = humanizeTurnText(turn, cleanText, intent)
   if (!summary) return null
 
   if (type === 'note' && intent !== 'code_change' && !(turn.filesReferenced?.length || turn.errorSignatures?.length)) {
@@ -376,7 +478,9 @@ function turnToEvent(turn) {
     files: turn.filesReferenced || [],
     errors: turn.errorSignatures || [],
     actor: type === 'briefing' ? 'user' : 'agent',
-    order: turn.idx
+    order: turn.idx,
+    isLastUser: false,
+    isLastAgent: false
   }
 }
 
@@ -398,7 +502,9 @@ function normalizeEventType(turn, text) {
 }
 
 function humanizeTurnText(turn, text, intent) {
-  const normalized = normalizeNarrativeText(text)
+  // Remove markers
+  const cleanText = text.replace(/^USER:\s*|^AGENT:\s*/, '')
+  const normalized = normalizeNarrativeText(cleanText)
   if (!normalized) return ''
 
   if (intent === 'command') {
@@ -428,11 +534,13 @@ function humanizeTurnText(turn, text, intent) {
     return `${actionVerb} ${filesSnippet}${suffix}`
   }
 
+  const limit = turn.isLastUser || turn.isLastAgent ? 1000 : 200
+
   if (turn.intent === 'note') {
-    return truncateSentence(focus, 200)
+    return truncateSentence(focus, limit)
   }
 
-  return truncateSentence(focus, 200)
+  return truncateSentence(focus, limit)
 }
 
 function summarizeCommand(text) {
