@@ -1,0 +1,239 @@
+## Error Summary
+### Network (175 occurrences)
+- "[PIECE CONNECTIONS CORS] {" (70×) — example: [PIECE CONNECTIONS CORS] {
+- " GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 10855ms" (48×) — example:  GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 10855ms
+- " GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenant{ID} 200 in 306ms" (14×) — example:  GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 306ms
+- " ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }" (7×) — example:  ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+- "piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!" (6×) — example: piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+- … (14 additional patterns)
+### Authentication (149 occurrences)
+- "use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON" (32×) — example: use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+- "piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback" (20×) — example: piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+- "[PIECES:OPTIONS] Evaluating property {" (14×) — example: [PIECES:OPTIONS] Evaluating property {
+- "[OAUTH] Token formatted for use {" (12×) — example: [OAUTH] Token formatted for use {
+- "[PIECES:OPTIONS] Hydrated connection auth {" (12×) — example: [PIECES:OPTIONS] Hydrated connection auth {
+- … (30 additional patterns)
+### Error (19 occurrences)
+- "[PIECES:OPTIONS] Failed to load flow document {" (14×) — example: [PIECES:OPTIONS] Failed to load flow document {
+- " ⨯ [Error: aborted]" (4×) — example:  ⨯ [Error: aborted]
+- "  stack: 'Error: aborted\n' +" (1×) — example:   stack: 'Error: aborted\n' +
+
+## Event Clusters
+
+### Cluster 1 (68 occurrences)
+Representative: [PIECE CONNECTIONS CORS] {
+Template (preview):
+- [PIECE CONNECTIONS CORS] {
+-   origin: '(empty - Vite proxy)',
+-   isDev: true,
+Related categories: Network (68)
+Sample:
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+
+### Cluster 2 (48 occurrences)
+Representative:  GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 10855ms
+Template (preview):
+-  GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 10855ms
+Related categories: Network (48)
+Sample:
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 10855ms
+
+### Cluster 3 (30 occurrences)
+Representative: use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+Template (preview):
+- use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+- [STACKTRACE (X) @ X-X-X.X:X] × 1
+Related categories: Authentication (30)
+Sample:
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+[STACKTRACE (X) @ X-X-X.X:X] × 1
+
+### Cluster 4 (15 occurrences)
+Representative: piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+Template (preview):
+- piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+Related categories: Authentication (15)
+Sample:
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+
+### Cluster 5 (14 occurrences)
+Representative: [PIECES:OPTIONS] Failed to load flow document {
+Template (preview):
+- [PIECES:OPTIONS] Failed to load flow document {
+-   resolvedFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326',
+-   error: 'Not Found'
+Related categories: Error (14)
+Sample:
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326',
+  error: 'Not Found'
+}
+
+### Cluster 6 (14 occurrences)
+Representative:  GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenant{ID} 200 in 306ms
+Template (preview):
+-  GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenant{ID} 200 in 306ms
+Variables:
+- {ID}: dd3355da-0072-4dd9-afba-0ad024cd9327
+Related categories: Network (14)
+Sample:
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 306ms
+
+### Cluster 7 (12 occurrences)
+Representative: [OAUTH] Token formatted for use {
+Template (preview):
+- [OAUTH] Token formatted for use {
+-   connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+-   tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+Related categories: Authentication (12)
+Sample:
+[OAUTH] Token formatted for use {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+… (2 lines omitted)
+
+### Cluster 8 (12 occurrences)
+Representative: [PIECES:OPTIONS] Hydrated connection auth {
+Template (preview):
+- [PIECES:OPTIONS] Hydrated connection auth {
+-   connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+-   tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+Related categories: Authentication (12)
+Sample:
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+… (1 lines omitted)
+
+### Cluster 9 (11 occurrences)
+Representative: [PIECES:OPTIONS] Evaluating property {
+Template (preview):
+- [PIECES:OPTIONS] Evaluating property {
+-   piece: 'google-sheets',
+-   property: 'spreadsheetId',
+Related categories: Authentication (11)
+Sample:
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+… (9 lines omitted)
+
+### Cluster 10 (7 occurrences)
+Representative:  ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+Template (preview):
+-  ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+Related categories: Network (7)
+Sample:
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+
+### Cluster 11 (6 occurrences)
+Representative: piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+Template (preview):
+- piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+Related categories: Network (6)
+Sample:
+piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+
+### Cluster 12 (5 occurrences)
+Representative: [CONNECTIONS] Registering connection a964de8d-d745-4f72-bf56-8effdd1a355b
+Template (preview):
+- [CONNECTIONS] Registering connection a964de8d-d745-4f72-bf56-8effdd1a355b
+Related categories: Network (5)
+Sample:
+[CONNECTIONS] Registering connection a964de8d-d745-4f72-bf56-8effdd1a355b
+
+### Cluster 13 (5 occurrences)
+Representative: [OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+Template (preview):
+- [OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+Related categories: Authentication (5)
+Sample:
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+
+### Cluster 14 (5 occurrences)
+Representative: piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+Template (preview):
+- piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+- [STACKTRACE X-X.X?X=X:X [X] 'X' X X X] × 1
+Related categories: Authentication (5)
+Sample:
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+[STACKTRACE X-X.X?X=X:X [X] 'X' X X X] × 1
+
+### Cluster 15 (4 occurrences)
+Representative: [Error: aborted] { code: 'ECONNRESET' }
+Template (preview):
+- [Error: aborted] { code: 'ECONNRESET' }
+Related categories: Network (4)
+Sample:
+[Error: aborted] { code: 'ECONNRESET' }
+
+### Cluster 16 (4 occurrences)
+Representative: [CONNECTIONS] Connection registered successfully: Google Sheets
+Template (preview):
+- [CONNECTIONS] Connection registered successfully: Google Sheets
+Related categories: Network (4)
+Sample:
+[CONNECTIONS] Connection registered successfully: Google Sheets
+
+### Cluster 17 (4 occurrences)
+Representative: [OAUTH APPS] OAuth app registered successfully: Google
+Template (preview):
+- [OAUTH APPS] OAuth app registered successfully: Google
+Related categories: Authentication (4)
+Sample:
+[OAUTH APPS] OAuth app registered successfully: Google
+
+### Cluster 18 (4 occurrences)
+Representative: App.tsx:37 App loaded, window.location.search: ?flow{ID}&flowVersion{ID}&tenant{ID}&token={JWT}&apiBase=http%3A%2F%2Flocalhost%3A5175&user{ID}
+Template (preview):
+- App.tsx:37 App loaded, window.location.search: ?flow{ID}&flowVersion{ID}&tenant{ID}&token={JWT}&apiBase=http%3A%2F%2Flocalhost%3A5175&user{ID}
+Variables:
+- {ID}: acac59bb-ac25-4bf7-9e31-037628977de8, e22acb50-5813-4cca-b09a-d4346ddff326, dd3355da-0072-4dd9-afba-0ad024cd9327, 9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+Related categories: Authentication (4)
+Sample:
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=e22acb50-5813- … 072-4dd9-afba-0ad024cd9327&token={JWT}&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+
+### Cluster 19 (4 occurrences)
+Representative: use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+Template (preview):
+- use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+Related categories: Network (4)
+Sample:
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+
+### Cluster 20 (4 occurrences)
+Representative:  ⨯ [Error: aborted]
+Template (preview):
+-  ⨯ [Error: aborted]
+Related categories: Error (4)
+Sample:
+ ⨯ [Error: aborted]
+
+… (55 additional clusters omitted)

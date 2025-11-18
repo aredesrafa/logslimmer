@@ -9,6 +9,8 @@
  * Result: 80%+ compression maintaining 100% critical information
  */
 
+const TIMELINE_TURN_LIMIT = 200
+
 /**
  * File summary structure
  */
@@ -502,7 +504,7 @@ export class StructuredDigestExtractor {
     })
 
     // Limit timeline
-    this.timeline = this.timeline.slice(0, 20)
+    this.timeline = this.timeline.slice(0, TIMELINE_TURN_LIMIT)
   }
 
   /**
@@ -524,7 +526,7 @@ export class StructuredDigestExtractor {
         decisions: this.plans.normalize().decisions.slice(0, 6), // Increased from 3 to 6
         affectedDocs: this.plans.normalize().affectedDocs.slice(0, 8) // Increased from 5 to 8
       },
-      timeline: this.timeline.slice(0, 20), // Increased from 15 to 20
+      timeline: this.timeline.slice(0, TIMELINE_TURN_LIMIT),
       enrichedTurns: this.enrichedTurns, // turns with metadata for co-author pipeline
       stats: {
         filesFound: this.files.size,
@@ -674,7 +676,7 @@ export function formatDigestAsMarkdown(digest, originalStats) {
   // Timeline
   if (digest.timeline && digest.timeline.length > 0) {
     output.push('### ⏱️ Event Timeline\n')
-    digest.timeline.slice(0, 12).forEach(event => { // Increased from 10 to 12
+    digest.timeline.slice(0, TIMELINE_TURN_LIMIT).forEach(event => {
       const icon = event.type === 'action' ? '✅' :
                    event.type === 'error' ? '❌' :
                    event.type === 'decision' ? '🎯' :

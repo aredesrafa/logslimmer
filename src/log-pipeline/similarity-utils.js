@@ -73,3 +73,212 @@ export function cosineSimilarity(vecA, vecB) {
   if (normA === 0 || normB === 0) return -Infinity
   return dot / (Math.sqrt(normA) * Math.sqrt(normB))
 }
+
+/**
+ * MinHash for fast Jaccard similarity estimation
+ * Reduces O(n²) pairwise comparisons to O(n log n) with LSH
+ */
+export class MinHash {
+  constructor(numHashes = 100, seed = 0) {
+    this.numHashes = numHashes
+    this.hashFunctions = []
+
+    // Generate hash functions with different seeds
+    for (let i = 0; i < numHashes; i++) {
+      this.hashFunctions.push({
+        a: (seed + i * 2 + 1) % 4294967291, // Large prime
+        b: (seed + i * 2 + 2) % 4294967291,
+        p: 4294967291 // Large prime modulus
+      })
+    }
+  }
+
+  /**
+   * Compute hash value for a token using a specific hash function
+   */
+  _hashToken(token, hashFunc) {
+    // Simple string hash, then apply linear transformation
+    let hash = 0
+    for (let i = 0; i < token.length; i++) {
+      hash = ((hash << 5) - hash + token.charCodeAt(i)) & 0x7fffffff
+    }
+    return ((hashFunc.a * hash + hashFunc.b) % hashFunc.p) >>> 0
+  }
+
+  /**
+   * Compute MinHash signature for a set of tokens
+   */
+  computeSignature(tokens) {
+    const signature = new Array(this.numHashes).fill(Infinity)
+
+    for (const token of tokens) {
+      for (let i = 0; i < this.numHashes; i++) {
+        const hash = this._hashToken(token, this.hashFunctions[i])
+        if (hash < signature[i]) {
+          signature[i] = hash
+        }
+      }
+    }
+
+    return signature
+  }
+
+  /**
+   * Estimate Jaccard similarity from two signatures
+   */
+  estimateSimilarity(sigA, sigB) {
+    if (sigA.length !== sigB.length || sigA.length !== this.numHashes) {
+      throw new Error('Signature length mismatch')
+    }
+
+    let matches = 0
+    for (let i = 0; i < this.numHashes; i++) {
+      if (sigA[i] === sigB[i]) {
+        matches++
+      }
+    }
+
+    return matches / this.numHashes
+  }
+}
+
+/**
+ * Compute MinHash signature for tokens (convenience function)
+ */
+export function computeMinHashSignature(tokens, numHashes = 100, seed = 0) {
+  const minHash = new MinHash(numHashes, seed)
+  return minHash.computeSignature(tokens)
+}
+
+/**
+ * Estimate Jaccard similarity using MinHash signatures
+ */
+export function minHashSimilarity(sigA, sigB, numHashes = 100) {
+  const minHash = new MinHash(numHashes)
+  return minHash.estimateSimilarity(sigA, sigB)
+}
+
+/**
+ * Locality Sensitive Hashing (LSH) index for approximate nearest neighbor search
+ * Uses banding technique for MinHash signatures
+ */
+export class LSHIndex {
+  constructor(numBands = 20, bandSize = 5, seed = 0) {
+    this.numBands = numBands
+    this.bandSize = bandSize
+    this.bands = Array.from({ length: numBands }, () => new Map())
+    this.items = new Map() // itemId -> signature
+    this.hashSeed = seed
+  }
+
+  /**
+   * Add an item with its MinHash signature to the index
+   */
+  add(itemId, signature) {
+    if (signature.length !== this.numBands * this.bandSize) {
+      throw new Error(`Signature length ${signature.length} doesn't match expected ${this.numBands * this.bandSize}`)
+    }
+
+    this.items.set(itemId, signature)
+
+    // Hash each band
+    for (let band = 0; band < this.numBands; band++) {
+      const start = band * this.bandSize
+      const bandSignature = signature.slice(start, start + this.bandSize)
+
+      // Create a hash for this band
+      const bandHash = this._hashBand(bandSignature, band)
+
+      if (!this.bands[band].has(bandHash)) {
+        this.bands[band].set(bandHash, [])
+      }
+      this.bands[band].get(bandHash).push(itemId)
+    }
+  }
+
+  /**
+   * Query for similar items to the given signature
+   */
+  query(signature, threshold = 0.5) {
+    const candidates = new Set()
+
+    // Find candidate buckets
+    for (let band = 0; band < this.numBands; band++) {
+      const start = band * this.bandSize
+      const bandSignature = signature.slice(start, start + this.bandSize)
+      const bandHash = this._hashBand(bandSignature, band)
+
+      const bucket = this.bands[band].get(bandHash)
+      if (bucket) {
+        for (const itemId of bucket) {
+          candidates.add(itemId)
+        }
+      }
+    }
+
+    // Filter candidates by actual similarity
+    const results = []
+    for (const itemId of candidates) {
+      const itemSig = this.items.get(itemId)
+      const similarity = this._estimateSimilarity(signature, itemSig)
+      if (similarity >= threshold) {
+        results.push({ itemId, similarity })
+      }
+    }
+
+    return results.sort((a, b) => b.similarity - a.similarity)
+  }
+
+  /**
+   * Get all items in the index
+   */
+  getAllItems() {
+    return Array.from(this.items.keys())
+  }
+
+  /**
+   * Estimate similarity between two signatures
+   */
+  _estimateSimilarity(sigA, sigB) {
+    let matches = 0
+    for (let i = 0; i < sigA.length; i++) {
+      if (sigA[i] === sigB[i]) {
+        matches++
+      }
+    }
+    return matches / sigA.length
+  }
+
+  /**
+   * Hash a band signature to a bucket
+   */
+  _hashBand(bandSignature, bandIndex) {
+    let hash = this.hashSeed + bandIndex
+    for (const value of bandSignature) {
+      hash = ((hash << 5) - hash + value) & 0x7fffffff
+    }
+    return hash >>> 0
+  }
+
+  /**
+   * Get statistics about the index
+   */
+  getStats() {
+    const bucketSizes = this.bands.map(band => {
+      const sizes = Array.from(band.values()).map(bucket => bucket.length)
+      return {
+        min: Math.min(...sizes),
+        max: Math.max(...sizes),
+        avg: sizes.reduce((a, b) => a + b, 0) / sizes.length,
+        totalBuckets: band.size
+      }
+    })
+
+    return {
+      numItems: this.items.size,
+      numBands: this.numBands,
+      bandSize: this.bandSize,
+      bucketStats: bucketSizes
+    }
+  }
+}

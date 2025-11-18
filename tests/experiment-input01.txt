@@ -1,0 +1,2461 @@
+Acessei o workflow com a conexão e piece que já haviam sido criadas, e tivemos alguns erros, impedindo a selecao de planilha (que normalmente quando acabamos de criar a conexao, essa parte conseguimos, so nunca conseuimos a selecao da pagina de planilha):
+
+ GET /api/payload-preferences/locale 200 in 85ms
+ GET /admin/collections/flows 200 in 1304ms
+ GET /api/payload-preferences/locale 200 in 33ms
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 2486ms
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 1456ms
+ GET /api/payload-preferences/locale 200 in 152ms
+ POST /api/tenants 200 in 151ms
+ ○ Compiling /app/workflows/[flowId]/edit ...
+ ✓ Compiled /app/workflows/[flowId]/edit in 5.8s (5352 modules)
+ ✓ Compiled in 870ms (1286 modules)
+Generating import map
+No new imports found, skipping writing import map
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+[WORKFLOW_EDITOR] Found existing FlowVersion: e22acb50-5813-4cca-b09a-d4346ddff326
+[WORKFLOW_EDITOR] Token resolved: provided
+ GET /app/workflows/acac59bb-ac25-4bf7-9e31-037628977de8/edit 200 in 13409ms
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 6825ms
+ GET /api/payload-preferences/locale 200 in 1191ms
+ ○ Compiling /api/workflows/pieces/catalog ...
+ ✓ Compiled /api/workflows/pieces/catalog in 3.5s (5337 modules)
+Generating import map
+No new imports found, skipping writing import map
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 9934ms
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1046ms
+[WORKFLOW_EDITOR] Found existing FlowVersion: e22acb50-5813-4cca-b09a-d4346ddff326
+[WORKFLOW_EDITOR] Token resolved: provided
+ GET /app/workflows/acac59bb-ac25-4bf7-9e31-037628977de8/edit 200 in 9836ms
+ ○ Compiling /api/flow-versions ...
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 10726ms
+ ✓ Compiled /api/flow-versions in 1073ms (5340 modules)
+ GET /api/flow-versions 200 in 2057ms
+ GET /api/payload-preferences/locale 200 in 213ms
+ GET /api/flow-versions 200 in 107ms
+ ○ Compiling /api/graphql ...
+ ✓ Compiled /api/graphql in 1750ms (5344 modules)
+ POST /api/graphql 200 in 3213ms
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 241ms
+ ○ Compiling /api/app/connections ...
+ ✓ Compiled /api/app/connections in 2.4s (5347 modules)
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 3211ms
+ GET /api/app/connections?scope=tenant&limit=20&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 3663ms
+ GET /api/app/connections?scope=tenant&limit=20&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 99ms
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+ ○ Compiling /api/workflows/pieces/options ...
+ ✓ Compiled /api/workflows/pieces/options in 10.8s (5365 modules)
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326',
+  error: 'Not Found'
+}
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326',
+  error: 'Not Found'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 12197ms
+Connection update: {
+  id: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection a964de8d-d745-4f72-bf56-8effdd1a355b
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH] Attempting token refresh {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  oauthAppName: 'unknown'
+}
+[OAUTH] Starting token refresh request {
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  tokenUrl: 'https://oauth2.googleapis.com/token',
+  refreshTokenPreview: '1//0h6RCgDPAiRcFCgYI...'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 458ms
+Connection update: {
+  id: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection a964de8d-d745-4f72-bf56-8effdd1a355b
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH] Attempting token refresh {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  oauthAppName: 'unknown'
+}
+[OAUTH] Starting token refresh request {
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  tokenUrl: 'https://oauth2.googleapis.com/token',
+  refreshTokenPreview: '1//0h6RCgDPAiRcFCgYI...'
+}
+[OAUTH APPS] Would encrypt client secret for Google
+[OAUTH APPS] Would encrypt client secret for Google
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+[OAUTH] Token refresh response received {
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  tokenPreview: 'ya29.a0ATi6K2udxTwG-...',
+  tokenType: 'Bearer',
+  expiresIn: 3599,
+  scopeCount: 3
+}
+Connection update: {
+  id: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection a964de8d-d745-4f72-bf56-8effdd1a355b
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH] Token refreshed successfully {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  newTokenPreview: 'ya29.a0ATi6K2udxTwG-...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  expiresIn: '2025-11-17T14:56:07.116Z'
+}
+[OAUTH] Token formatted for use {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T12:11:34.158Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'connectionId',
+    'pieceVersion'
+  ],
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[OAUTH] Token refresh response received {
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  tokenPreview: 'ya29.a0ATi6K2uQ5c0ji...',
+  tokenType: 'Bearer',
+  expiresIn: 3599,
+  scopeCount: 3
+}
+[OAUTH APPS] Would encrypt client secret for Google
+Connection update: {
+  id: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection a964de8d-d745-4f72-bf56-8effdd1a355b
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH] Token refreshed successfully {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  newTokenPreview: 'ya29.a0ATi6K2uQ5c0ji...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  expiresIn: '2025-11-17T14:56:07.310Z'
+}
+[OAUTH] Token formatted for use {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T12:11:34.158Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tokenPreview: 'ya29.a0ATi6K2vZ0S1Yb...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'connectionId',
+    'pieceVersion'
+  ],
+  connectionId: 'a964de8d-d745-4f72-bf56-8effdd1a355b',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+[OAUTH APPS] Would encrypt client secret for Google
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+ POST /api/workflows/pieces/options 200 in 14165ms
+[PIECES:OPTIONS] Error evaluating dynamic property {
+  message: 'Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.',
+  isAuthError: true,
+  statusCode: 401,
+  code: 401,
+  error: Error: Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+      at async Object.options (packages/activepieces-pieces/pieces/google-sheets/src/lib/common/props.js:41:30)
+      at async invokeWithFallback (src/workflows/pieces/adapters/activepieces/dynamic.ts:162:12)
+      at async executeDefault (src/workflows/pieces/adapters/activepieces/dynamic.ts:325:20)
+      at async executeDefaultWithRetry (src/workflows/pieces/adapters/activepieces/dynamic.ts:241:14)
+      at async handleActivepiecesOptions (src/app/api/workflows/pieces/options/route.ts:290:24)
+    160 |
+    161 |     const fallbackArgs = fn.length > 1 ? [mergedArg, contextArg] : [mergedArg]
+  > 162 |     return await fn(...fallbackArgs)
+        |            ^
+    163 |   } catch (fallbackError) {
+    164 |     // Both standard and fallback failed
+    165 |     const fallbackMsg = fallbackError instanceof Error ? fallbackError.message : String(fallbackError) {
+    config: {
+      url: URL {},
+      method: 'GET',
+      apiVersion: '',
+      userAgentDirectives: [Array],
+      paramsSerializer: [Function (anonymous)],
+      headers: Headers {
+        'accept-encoding': 'gzip',
+        authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        'user-agent': 'google-api-nodejs-client/8.0.0 (gzip)',
+        'x-goog-api-client': 'gdcl/8.0.0 gl-node/25.1.0'
+      },
+      params: [Object],
+      validateStatus: [Function (anonymous)],
+      retry: true,
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor],
+      retryConfig: [Object]
+    },
+    response: Response {
+      size: 0,
+      data: [Object],
+      config: [Object],
+      Symbol(Body internals): [Object],
+      Symbol(Response internals): [Object]
+    },
+    code: 401,
+    status: 401,
+    error: undefined,
+    [cause]: {
+      message: 'Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.',
+      code: 401,
+      status: 'UNAUTHENTICATED',
+      errors: [Array]
+    }
+  },
+  stack: 'Error: Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\n' +
+    '    at Gaxios._request (/Users/rafaelaredes/Documents/AIOA/new02/packages/activepieces-pieces/node_modules/gaxios/build/cjs/src/gaxios.js:155:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n' +
+    '    at async OAuth2Client.requestAsync (/Users/rafaelaredes/Documents/AIOA/new02/packages/activepieces-pieces/node_modules/google-auth-library/build/src/auth/oauth2client.js:463:20)\n' +
+    '    at async createAPIRequestAsync (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/googleapis-common@8.0.0/node_modules/googleapis-common/build/src/apirequest.js:308:25)\n' +
+    '    at async Object.options (/Users/rafaelaredes/Documents/AIOA/new02/packages/activepieces-pieces/pieces/google-sheets/src/lib/common/props.js:41:30)\n' +
+    '    at async invokeWithFallback (webpack-internal:///(rsc)/./src/workflows/pieces/adapters/activepieces/dynamic.ts:110:16)\n' +
+    '    at async executeDefault (webpack-internal:///(rsc)/./src/workflows/pieces/adapters/activepieces/dynamic.ts:221:24)\n' +
+    '    at async executeDefaultWithRetry (webpack-internal:///(rsc)/./src/workflows/pieces/adapters/activepieces/dynamic.ts:166:20)\n' +
+    '    at async handleActivepiecesOptions (webpack-internal:///(rsc)/./src/app/api/workflows/pieces/options/route.ts:211:28)\n' +
+    '    at async AppRouteRouteModule.do (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (webpack-internal:///(rsc)/./node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute&page=%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute.ts&appDir=%2FUsers%2Frafaelaredes%2FDocuments%2FAIOA%2Fnew02%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Frafaelaredes%2FDocuments%2FAIOA%2Fnew02&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:206:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:1:187565)\n' +
+    '    at async handleResponse (webpack-internal:///(rsc)/./node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute&page=%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute.ts&appDir=%2FUsers%2Frafaelaredes%2FDocuments%2FAIOA%2Fnew02%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Frafaelaredes%2FDocuments%2FAIOA%2Fnew02&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:268:32)\n' +
+    '    at async handler (webpack-internal:///(rsc)/./node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute&page=%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fworkflows%2Fpieces%2Foptions%2Froute.ts&appDir=%2FUsers%2Frafaelaredes%2FDocuments%2FAIOA%2Fnew02%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Frafaelaredes%2FDocuments%2FAIOA%2Fnew02&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:320:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/Users/rafaelaredes/Documents/AIOA/new02/node_modules/.pnpm/next@15.5.2_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.54.1_babel-plugin-_gihs7mkujexsxmpdqrguqcyhqy/node_modules/next/dist/server/lib/start-server.js:226:13)'
+}
+ POST /api/workflows/pieces/options 401 in 14436ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: 'e22acb50-5813-4cca-b09a-d4346ddff326',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 775ms
+ POST /api/graphql 200 in 258ms
+
+
+
+
+
+Console log
+client:733 [vite] connecting...
+client:827 [vite] connected.
+cache-persistence.js:42 [apollo-cache-persist] Debounce is not recommended with `background` trigger
+Log2.emit @ apollo3-cache-persist.js?v=452e5665:22
+Log2.write @ apollo3-cache-persist.js?v=452e5665:39
+Log2.warn @ apollo3-cache-persist.js?v=452e5665:54
+Trigger2 @ apollo3-cache-persist.js?v=452e5665:559
+CachePersistor2 @ apollo3-cache-persist.js?v=452e5665:603
+persistCache_default @ apollo3-cache-persist.js?v=452e5665:647
+setupCachePersistence @ cache-persistence.js:42
+createApolloClient @ client.js:25
+(anonymous) @ apollo-client.ts:84
+cache-persistence.js:42 [apollo-cache-persist] Trigger option `background` not available on web; using `write` trigger
+Log2.emit @ apollo3-cache-persist.js?v=452e5665:22
+Log2.write @ apollo3-cache-persist.js?v=452e5665:39
+Log2.warn @ apollo3-cache-persist.js?v=452e5665:54
+onAppBackground_default @ apollo3-cache-persist.js?v=452e5665:519
+Trigger2 @ apollo3-cache-persist.js?v=452e5665:562
+CachePersistor2 @ apollo3-cache-persist.js?v=452e5665:603
+persistCache_default @ apollo3-cache-persist.js?v=452e5665:647
+setupCachePersistence @ cache-persistence.js:42
+createApolloClient @ client.js:25
+(anonymous) @ apollo-client.ts:84
+cache-persistence.js:54 [ApolloCachePersistence] Cache persistence initialized: apollo-cache-9e6173cc-84c8-4148-9639-cc4cbc6d8cf1-dd3355da-0072-4dd9-afba-0ad024cd9327
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=e22acb50-5813-4cca-b09a-d4346ddff326&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: undefined
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=e22acb50-5813-4cca-b09a-d4346ddff326&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: undefined
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg
+main-app.js?v=1763387719680:1181 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+page.tsx:21  Server  [WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+page.tsx:107  Server  [WORKFLOW_EDITOR] Found existing FlowVersion: e22acb50-5813-4cca-b09a-d4346ddff326
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+report-hmr-latency.js:14 [Fast Refresh] done in 1763387726887ms
+registry.ts:222 [PIECES] Loaded from backend: {count: 19, url: '/api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327'}
+App.tsx:170 [WORKFLOW_LOADER] Fetching workflow acac59bb-ac25-4bf7-9e31-037628977de8 from http://localhost:5175/api/flow-versions
+page.tsx:21  Server  [WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+registry.ts:222 [PIECES] Loaded from backend: {count: 19, url: '/api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327'}
+App.tsx:170 [WORKFLOW_LOADER] Fetching workflow acac59bb-ac25-4bf7-9e31-037628977de8 from http://localhost:5175/api/flow-versions
+page.tsx:107  Server  [WORKFLOW_EDITOR] Found existing FlowVersion: e22acb50-5813-4cca-b09a-d4346ddff326
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 599ms
+App.tsx:180 [WORKFLOW_LOADER] Workflow list loaded: {docs: Array(1), hasNextPage: false, hasPrevPage: false, limit: 25, nextPage: null, …}
+App.tsx:180 [WORKFLOW_LOADER] Workflow list loaded: {docs: Array(1), hasNextPage: false, hasPrevPage: false, limit: 25, nextPage: null, …}
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=e22acb50-5813-4cca-b09a-d4346ddff326&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327', token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllN…g4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg', apiBase: 'http://localhost:5175', userId: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1', …}
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=e22acb50-5813-4cca-b09a-d4346ddff326&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327', token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllN…g4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg', apiBase: 'http://localhost:5175', userId: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1', …}
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjQyM2NhYTE3LTQzZTEtNGExMi1iODM3LWM4NTgxZGRhYTQ1MiIsInRlbmFudHMiOltdLCJpYXQiOjE3NjMzODc2ODcsImV4cCI6MTc2MzM5NDg4N30.n5KeHikn6CGmCnyXiD3lCqnBYMc_ivJ-hPmt0XskBzg
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: e22acb50-5813-4cca-b09a-d4346ddff326
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: e22acb50-5813-4cca-b09a-d4346ddff326
+ReactEditorClient.tsx:44 [EditorClient] FlowVersion ID from URL: e22acb50-5813-4cca-b09a-d4346ddff326
+ReactEditorClient.tsx:44 [EditorClient] FlowVersion ID from URL: e22acb50-5813-4cca-b09a-d4346ddff326
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 1302ms
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: 'e22acb50-5813-4cca-b09a-d4346ddff326', effectiveFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: 'e22acb50-5813-4cca-b09a-d4346ddff326', effectiveFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326', resolvedFlowVersionExists: true}
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 1206ms
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+setInterval
+(anonymous) @ use-workflow-realtime.ts:37
+(anonymous) @ use-workflow-realtime.ts:82
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18567
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+commitHookEffectListMount @ react-dom_client.js?v=0e7c4398:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=0e7c4398:9465
+reconnectPassiveEffects @ react-dom_client.js?v=0e7c4398:11273
+recursivelyTraverseReconnectPassiveEffects @ react-dom_client.js?v=0e7c4398:11240
+reconnectPassiveEffects @ react-dom_client.js?v=0e7c4398:11292
+doubleInvokeEffectsOnFiber @ react-dom_client.js?v=0e7c4398:13339
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:999
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13321
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:999
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13326
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:999
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13326
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+commitDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13347
+flushPassiveEffects @ react-dom_client.js?v=0e7c4398:13157
+flushPendingEffects @ react-dom_client.js?v=0e7c4398:13088
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13514
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+flushSpawnedWork @ react-dom_client.js?v=0e7c4398:13067
+commitRoot @ react-dom_client.js?v=0e7c4398:12804
+commitRootWhenReady @ react-dom_client.js?v=0e7c4398:12016
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11950
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+EditorClient @ ReactEditorClient.tsx:125
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+processRootScheduleInMicrotask @ react-dom_client.js?v=0e7c4398:13437
+(anonymous) @ react-dom_client.js?v=0e7c4398:13531
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+EditorClient @ EditorClient.tsx:17
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8484
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=0e7c4398:12557
+renderRootConcurrent @ react-dom_client.js?v=0e7c4398:12539
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+App @ App.tsx:217
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+(anonymous) @ main.tsx:12
+index.tsx:556 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763377862553', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:615 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:556 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763377862553', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:615 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:179 [StepSettings] defaultValues computed: {stepName: 'step_1763377862553', displayName: 'Insert Row', settingsKeys: Array(10)}
+index.tsx:179 [StepSettings] defaultValues computed: {stepName: 'step_1763377862553', displayName: 'Insert Row', settingsKeys: Array(10)}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'Manual Trigger', triggerType: 'MANUAL', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763377862553', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:214 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763377862553', stepKey: 'action:step_1763377862553', timestamp: 1763387754516}
+index.tsx:222 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'Manual Trigger', triggerType: 'MANUAL', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763377862553', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:214 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763377862553', stepKey: 'action:step_1763377862553', timestamp: 1763387754523}
+index.tsx:222 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=0e7c4398:13527 [Violation] 'click' handler took 191ms
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 792ms
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+setInterval
+(anonymous) @ use-workflow-realtime.ts:37
+(anonymous) @ use-workflow-realtime.ts:82
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18567
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+commitHookEffectListMount @ react-dom_client.js?v=0e7c4398:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=0e7c4398:9465
+reconnectPassiveEffects @ react-dom_client.js?v=0e7c4398:11273
+recursivelyTraverseReconnectPassiveEffects @ react-dom_client.js?v=0e7c4398:11240
+reconnectPassiveEffects @ react-dom_client.js?v=0e7c4398:11292
+doubleInvokeEffectsOnFiber @ react-dom_client.js?v=0e7c4398:13339
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:999
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13321
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:999
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13326
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:999
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13326
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13317
+commitDoubleInvokeEffectsInDEV @ react-dom_client.js?v=0e7c4398:13347
+flushPassiveEffects @ react-dom_client.js?v=0e7c4398:13157
+flushPendingEffects @ react-dom_client.js?v=0e7c4398:13088
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13514
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+flushSpawnedWork @ react-dom_client.js?v=0e7c4398:13067
+commitRoot @ react-dom_client.js?v=0e7c4398:12804
+commitRootWhenReady @ react-dom_client.js?v=0e7c4398:12016
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11950
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+EditorClient @ ReactEditorClient.tsx:125
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+processRootScheduleInMicrotask @ react-dom_client.js?v=0e7c4398:13437
+(anonymous) @ react-dom_client.js?v=0e7c4398:13531
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+EditorClient @ EditorClient.tsx:17
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8484
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=0e7c4398:12557
+renderRootConcurrent @ react-dom_client.js?v=0e7c4398:12539
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+App @ App.tsx:217
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+(anonymous) @ main.tsx:12
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 1973ms
+piece-settings.tsx:962  POST http://localhost:5161/api/workflows/pieces/options 401 (Unauthorized)
+fetchOptions @ piece-settings.tsx:962
+(anonymous) @ piece-settings.tsx:1020
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18567
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+commitHookEffectListMount @ react-dom_client.js?v=0e7c4398:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=0e7c4398:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11167
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11141
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11167
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11141
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11167
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11141
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=0e7c4398:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=0e7c4398:11066
+flushPassiveEffects @ react-dom_client.js?v=0e7c4398:13150
+flushPendingEffects @ react-dom_client.js?v=0e7c4398:13088
+flushSpawnedWork @ react-dom_client.js?v=0e7c4398:13062
+commitRoot @ react-dom_client.js?v=0e7c4398:12804
+commitRootWhenReady @ react-dom_client.js?v=0e7c4398:12016
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11950
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+processRootScheduleInMicrotask @ react-dom_client.js?v=0e7c4398:13437
+(anonymous) @ react-dom_client.js?v=0e7c4398:13531
+<PieceField>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+(anonymous) @ piece-settings.tsx:708
+PieceSettings @ piece-settings.tsx:689
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+processRootScheduleInMicrotask @ react-dom_client.js?v=0e7c4398:13437
+(anonymous) @ react-dom_client.js?v=0e7c4398:13531
+<PieceSettings>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+StepSettingsPanel @ index.tsx:465
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+processRootScheduleInMicrotask @ react-dom_client.js?v=0e7c4398:13437
+(anonymous) @ react-dom_client.js?v=0e7c4398:13531
+<StepSettingsPanel>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+BuilderPageNewUI @ index.tsx:145
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+processRootScheduleInMicrotask @ react-dom_client.js?v=0e7c4398:13437
+(anonymous) @ react-dom_client.js?v=0e7c4398:13531
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+EditorClient @ ReactEditorClient.tsx:125
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performSyncWorkOnRoot @ react-dom_client.js?v=0e7c4398:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=0e7c4398:13414
+processRootScheduleInMicrotask @ react-dom_client.js?v=0e7c4398:13437
+(anonymous) @ react-dom_client.js?v=0e7c4398:13531
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+EditorClient @ EditorClient.tsx:17
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8484
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=0e7c4398:12557
+renderRootConcurrent @ react-dom_client.js?v=0e7c4398:12539
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<...>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+App @ App.tsx:217
+react_stack_bottom_frame @ react-dom_client.js?v=0e7c4398:18509
+renderWithHooksAgain @ react-dom_client.js?v=0e7c4398:5729
+renderWithHooks @ react-dom_client.js?v=0e7c4398:5665
+updateFunctionComponent @ react-dom_client.js?v=0e7c4398:7475
+beginWork @ react-dom_client.js?v=0e7c4398:8525
+runWithFiberInDEV @ react-dom_client.js?v=0e7c4398:997
+performUnitOfWork @ react-dom_client.js?v=0e7c4398:12561
+workLoopSync @ react-dom_client.js?v=0e7c4398:12424
+renderRootSync @ react-dom_client.js?v=0e7c4398:12408
+performWorkOnRoot @ react-dom_client.js?v=0e7c4398:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=0e7c4398:13505
+performWorkUntilDeadline @ react-dom_client.js?v=0e7c4398:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=37cb184e:247
+(anonymous) @ main.tsx:12
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+index.tsx:328 [StepSettings] Real changes detected on blur, submitting: {stepName: 'step_1763377862553', displayName: 'Insert Row'}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: e22acb50-5813-4cca-b09a-d4346ddff326
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'Manual Trigger', triggerType: 'MANUAL', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763377862553', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: e22acb50-5813-4cca-b09a-d4346ddff326
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: e22acb50-5813-4cca-b09a-d4346ddff326
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: 'e22acb50-5813-4cca-b09a-d4346ddff326', effectiveFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: 'e22acb50-5813-4cca-b09a-d4346ddff326', effectiveFlowId: 'e22acb50-5813-4cca-b09a-d4346ddff326', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=0e7c4398:13527 [Violation] 'setTimeout' handler took 88ms
+index.tsx:324 [StepSettings] No real changes detected on blur, skipping submission
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+
+
+
+-------
+Quando fazemos a conexao logo que incluimos a peça. Há um delay grande até as planilhas aparecerem para seleção, e como já mencionado, e a página da planilha (Sheet) continua nao ficando disponivel para ser selecionada, retornando sempre um dropdown vazio.
+
+Log do terminal:
+ POST /api/graphql 200 in 323ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 429ms
+ POST /api/graphql 200 in 398ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 306ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: false,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion'
+  ],
+  connectionId: undefined,
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+ POST /api/workflows/pieces/options 200 in 533ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: false,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion'
+  ],
+  connectionId: undefined,
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+ POST /api/workflows/pieces/options 200 in 682ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 290ms
+ ○ Compiling /api/workflows/pieces/connections/start ...
+ ✓ Compiled /api/workflows/pieces/connections/start in 1167ms (5794 modules)
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ POST /api/workflows/pieces/connections/start 200 in 2112ms
+ ○ Compiling /api/workflows/pieces/connections/check-claim ...
+ ✓ Compiled /api/workflows/pieces/connections/check-claim in 7.6s (5656 modules)
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 10855ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 65ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 54ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 64ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 45ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 56ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 87ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 62ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 73ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 81ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 54ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 59ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 85ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 61ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 60ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 57ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 52ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 54ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 50ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 60ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 64ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 48ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 48ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 72ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 61ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 52ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 110ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 86ms
+ ○ Compiling /api/workflows/pieces/oauth/[provider]/callback ...
+ ✓ Compiled /api/workflows/pieces/oauth/[provider]/callback in 2.2s (5659 modules)
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 2753ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 109ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 100ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 1494ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 94ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 73ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 65ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 91ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 79ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 96ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 86ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 49ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 58ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 71ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 75ms
+[OAUTH CALLBACK] Starting fallback server-side claim { state: 'ea3b16ba-2f58-42cb-8de3-0f92988b056f' }
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/oauth/google/callback?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f&code=4/0Ab32j93POMyNZLqD0L-8FpgJhmM4iq_z-42JR2TXzu26Qgg55B-1jJUWl9HFmi_cQPBsUA&scope=https://www.googleapis.com/auth/drive%20https://www.googleapis.com/auth/drive.readonly%20https://www.googleapis.com/auth/spreadsheets 200 in 7830ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 202 in 75ms
+ ○ Compiling /api/workflows/pieces/connections/claim ...
+Connection create: {
+  id: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection 4b9041f6-3cb8-46cf-a057-d61d0faa9ef6
+[CONNECTIONS] Connection registered successfully: Google Sheets
+ ✓ Compiled /api/workflows/pieces/connections/claim in 2s (5657 modules)
+[OAUTH APPS] Would encrypt client secret for Google
+[OAUTH CALLBACK] Fallback claim succeeded { connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6' }
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 200 in 2233ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ POST /api/workflows/pieces/connections/claim 201 in 2957ms
+ ⨯ [Error: aborted]
+ ⨯ [Error: aborted]
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 200 in 303ms
+ ⨯ [Error: aborted]
+ ⨯ [Error: aborted]
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 737ms
+ ○ Compiling /_error ...
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 2522ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 200 in 2404ms
+ POST /api/workflows/pieces/options 200 in 2733ms
+ POST /api/workflows/pieces/options 200 in 2733ms
+[PIECES:OPTIONS] Error evaluating dynamic property {
+  message: 'aborted',
+  isAuthError: false,
+  statusCode: undefined,
+  code: 'ECONNRESET',
+  error: [Error: aborted] { code: 'ECONNRESET' },
+  stack: 'Error: aborted\n' +
+    '    at abortIncoming (node:_http_server:847:17)\n' +
+    '    at socketOnClose (node:_http_server:841:3)\n' +
+    '    at Socket.emit (node:events:520:35)\n' +
+    '    at TCP.<anonymous> (node:net:346:12)\n' +
+    '    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)'
+}
+[PIECES:OPTIONS] Error evaluating dynamic property {
+  message: 'aborted',
+  isAuthError: false,
+  statusCode: undefined,
+  code: 'ECONNRESET',
+  error: [Error: aborted] { code: 'ECONNRESET' },
+  stack: 'Error: aborted\n' +
+    '    at abortIncoming (node:_http_server:847:17)\n' +
+    '    at socketOnClose (node:_http_server:841:3)\n' +
+    '    at Socket.emit (node:events:520:35)\n' +
+    '    at TCP.<anonymous> (node:net:346:12)\n' +
+    '    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/api/workflows/pieces/connections'
+}
+ ✓ Compiled /_error in 7.1s (5797 modules)
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 500 in 13628ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 200 in 13464ms
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+ POST /api/graphql 200 in 13745ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+ POST /api/workflows/pieces/options 200 in 13513ms
+ POST /api/workflows/pieces/options 200 in 13535ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 200 in 1852ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+ POST /api/workflows/pieces/options 200 in 1873ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1950ms
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+ POST /api/workflows/pieces/options 200 in 1988ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections/check-claim?state=ea3b16ba-2f58-42cb-8de3-0f92988b056f 200 in 414ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+ POST /api/workflows/pieces/options 200 in 497ms
+ POST /api/workflows/pieces/options 200 in 497ms
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 515ms
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 249ms
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+ POST /api/workflows/pieces/options 200 in 252ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 122ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 71ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 98ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 63ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 55ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 83ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 65ms
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 252
+}
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 58ms
+[PIECE CONNECTIONS CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 100ms
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 252
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 252
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 252
+}
+ POST /api/workflows/pieces/options 200 in 2587ms
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Failed to load flow document {
+  resolvedFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  error: 'Not Found'
+}
+[OAUTH] Token formatted for use {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  expiresAt: '2025-11-17T15:01:07.556Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth {
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tokenPreview: 'ya29.a0ATi6K2vLEbzOR...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ]
+}
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [
+    'includeTeamDrives',
+    'spreadsheetId',
+    'sheetId',
+    'as_string',
+    'first_row_headers',
+    'values',
+    'pieceName',
+    'actionName',
+    'pieceVersion',
+    'connectionId'
+  ],
+  connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 0
+}
+ POST /api/workflows/pieces/options 200 in 1535ms
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 252
+}
+ POST /api/workflows/pieces/options 200 in 3324ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '85d1b73e-76bf-402a-b590-bbc535282aaf',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 506ms
+ POST /api/graphql 200 in 299ms
+
+
+
+
+Log do console:
+
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+index.tsx:556 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763388034522', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:615 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:556 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763388034522', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:615 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:179 [StepSettings] defaultValues computed: {stepName: 'step_1763388034522', displayName: 'Insert Row', settingsKeys: Array(9)}
+index.tsx:179 [StepSettings] defaultValues computed: {stepName: 'step_1763388034522', displayName: 'Insert Row', settingsKeys: Array(9)}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'Manual Trigger', triggerType: 'MANUAL', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763388034522', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:214 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763388034522', stepKey: 'action:step_1763388034522', timestamp: 1763388035175}
+index.tsx:222 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'Manual Trigger', triggerType: 'MANUAL', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763388034522', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:214 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763388034522', stepKey: 'action:step_1763388034522', timestamp: 1763388035180}
+index.tsx:222 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=0e7c4398:13527 [Violation] 'setTimeout' handler took 57ms
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 1508ms
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+report-hmr-latency.js:14 [Fast Refresh] done in 2036ms
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 845ms
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+piece-settings.tsx:392 [PieceSettings] handleMessage received {type: 'workflow-oauth-callback', origin: 'http://localhost:5175', hasData: true}
+piece-settings.tsx:401 [PieceSettings] Received OAuth callback {hasCode: true, hasError: false, state: 'ea3b16ba-2f58-42cb-8de3-0f92988b056f'}
+piece-settings.tsx:295 [PieceSettings] processOAuthResult called {hasPayload: true, payloadState: 'ea3b16ba-2f58-42cb-8de3-0f92988b056f', currentHandshakeState: 'ea3b16ba-2f58-42cb-8de3-0f92988b056f', statesMatch: true}
+piece-settings.tsx:347 [PieceSettings] Got OAuth code, claiming connection
+piece-settings.tsx:392 [PieceSettings] handleMessage received {type: 'oauth-storage-ready', origin: 'http://localhost:5175', hasData: true}
+piece-settings.tsx:421 [PieceSettings] Storage ready, checking localStorage: oauth-ea3b16ba-2f58-42cb-8de3-0f92988b056f
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 655ms
+piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:354 [PieceSettings] Connection claim succeeded! {connectionId: '4b9041f6-3cb8-46cf-a057-d61d0faa9ef6'}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'Manual Trigger', triggerType: 'MANUAL', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763388034522', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+report-hmr-latency.js:14 [Fast Refresh] done in 3611ms
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-piece-connections.ts:48  GET http://localhost:5161/api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 500 (Internal Server Error)
+(anonymous) @ use-piece-connections.ts:48
+(anonymous) @ use-piece-connections.ts:75
+processOAuthResult @ piece-settings.tsx:359
+await in processOAuthResult
+handleMessage @ piece-settings.tsx:406
+postMessage
+(anonymous) @ :5175/api/workflows/…uth/spreadsheets:50
+(anonymous) @ :5175/api/workflows/…uth/spreadsheets:71
+piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=0e7c4398:13527 [Violation] 'setTimeout' handler took 86ms
+piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+piece-settings.tsx:511 [PieceSettings] Connection claim succeeded!
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+react-dom_client.js?v=0e7c4398:16 [Violation] 'message' handler took 375ms
+react-dom_client.js?v=0e7c4398:13527 [Violation] 'pointerdown' handler took 360ms
+index.tsx:324 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:324 [StepSettings] No real changes detected on blur, skipping submission
+react-dom_client.js?v=0e7c4398:13527 [Violation] 'pointerup' handler took 397ms
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+react-dom_client.js?v=0e7c4398:16 [Violation] 'message' handler took 306ms
+index.tsx:328 [StepSettings] Real changes detected on blur, submitting: {stepName: 'step_1763388034522', displayName: 'Insert Row'}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'Manual Trigger', triggerType: 'MANUAL', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763388034522', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 85d1b73e-76bf-402a-b590-bbc535282aaf
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:105 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '85d1b73e-76bf-402a-b590-bbc535282aaf', effectiveFlowId: '85d1b73e-76bf-402a-b590-bbc535282aaf', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=0e7c4398:13527 [Violation] 'setTimeout' handler took 290ms
+index.tsx:324 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:324 [StepSettings] No real changes detected on blur, skipping submission
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+index.tsx:324 [StepSettings] No real changes detected on blur, skipping submission
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+use-workflow-realtime.ts:70 [WorkflowRealtime][Polling] Error fetching runs: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+(anonymous) @ use-workflow-realtime.ts:70
+index.tsx:324 [StepSettings] No real changes detected on blur, skipping submission
+

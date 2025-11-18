@@ -85,9 +85,9 @@ export async function buildClustersNoEmbeddings(events) {
     totalEvents: adaptiveThresholds.totalEvents
   })
 
-  // Use hierarchical clustering if enabled and dataset is not too large
-  if (ENHANCED_FEATURES.hierarchicalClustering && events.length <= 200) {
-    logger.log('Using hierarchical clustering')
+  // Use hierarchical clustering if enabled (now optimized with LSH for larger datasets)
+  if (ENHANCED_FEATURES.hierarchicalClustering) {
+    logger.log('Using optimized hierarchical clustering with LSH')
     return buildClustersHierarchical(events, adaptiveThresholds)
   }
 

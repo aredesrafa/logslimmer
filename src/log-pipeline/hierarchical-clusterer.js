@@ -6,7 +6,9 @@
 import {
   tokenizeForSimilarity,
   normalizedLevenshtein,
-  jaccardSimilarity
+  jaccardSimilarity,
+  MinHash,
+  LSHIndex
 } from './similarity-utils.js'
 import {
   calculateStructuralSimilarity,
@@ -180,29 +182,47 @@ class HierarchicalCluster {
 }
 
 /**
- * Perform hierarchical clustering on log events
+ * Perform hierarchical clustering on log events using LSH for efficiency
  */
 export function performHierarchicalClustering(events, adaptiveThresholds) {
-  console.log('[hierarchical] Starting hierarchical clustering with', events.length, 'events')
+  console.log('[hierarchical] Starting optimized hierarchical clustering with', events.length, 'events')
+
+  // Precompute MinHash signatures for all events
+  const minHash = new MinHash(100) // 100 hash functions
+  const eventSignatures = new Map()
+
+  for (const event of events) {
+    const tokens = tokenizeForSimilarity(event.signature)
+    const signature = minHash.computeSignature(tokens)
+    eventSignatures.set(event, signature)
+  }
+
+  // Build LSH index
+  const lshIndex = new LSHIndex(20, 5) // 20 bands, 5 rows each
+  for (const [event, signature] of eventSignatures) {
+    lshIndex.add(event, signature)
+  }
+
+  console.log('[hierarchical] LSH index built with', lshIndex.getStats().numItems, 'items')
 
   const clusters = []
   const processedEvents = new Set()
 
   // Level 1: High similarity clustering (near identical logs)
   console.log('[hierarchical] Level 1: High similarity clustering')
-  const level1Clusters = clusterAtLevel(events, 1, adaptiveThresholds, processedEvents)
+  const level1Clusters = clusterAtLevelLSH(events, 1, adaptiveThresholds, processedEvents, lshIndex, eventSignatures, minHash)
   clusters.push(...level1Clusters)
 
   // Level 2: Medium similarity clustering (same type/structure)
   console.log('[hierarchical] Level 2: Medium similarity clustering')
   const remainingEvents = events.filter(event => !processedEvents.has(event))
-  const level2Clusters = clusterAtLevel(remainingEvents, 2, adaptiveThresholds, processedEvents)
+  const level2Clusters = clusterAtLevelLSH(remainingEvents, 2, adaptiveThresholds, processedEvents, lshIndex, eventSignatures, minHash)
   clusters.push(...level2Clusters)
 
   // Level 3: Low similarity clustering (same category/context)
   console.log('[hierarchical] Level 3: Low similarity clustering')
   const finalEvents = events.filter(event => !processedEvents.has(event))
-  const level3Clusters = clusterAtLevel(finalEvents, 3, adaptiveThresholds, processedEvents)
+  const level3Clusters = clusterAtLevelLSH(finalEvents, 3, adaptiveThresholds, processedEvents, lshIndex, eventSignatures, minHash)
   clusters.push(...level3Clusters)
 
   console.log('[hierarchical] Completed hierarchical clustering:', clusters.length, 'clusters from', events.length, 'events')
@@ -255,6 +275,44 @@ function findClusterCandidates(cluster, unassignedEvents, level, adaptiveThresho
 
   return candidates
 }
+
+/**
+ * Perform clustering at a specific similarity level using LSH
+ */
+function clusterAtLevelLSH(events, level, adaptiveThresholds, processedEvents, lshIndex, eventSignatures, minHash) {
+  const clusters = []
+  const unassignedEvents = [...events]
+
+  while (unassignedEvents.length > 0) {
+    const seedEvent = unassignedEvents.shift()
+    const cluster = new HierarchicalCluster(seedEvent)
+    processedEvents.add(seedEvent)
+
+    // Query LSH for candidate events similar to seed
+    const seedSignature = eventSignatures.get(seedEvent)
+    const threshold = cluster.getSimilarityThreshold(level)
+    const candidates = lshIndex.query(seedSignature, threshold)
+      .map(result => result.itemId)
+      .filter(event => unassignedEvents.includes(event) && cluster.shouldAccept(event, level, adaptiveThresholds))
+
+    for (const candidate of candidates) {
+      cluster.addEvent(candidate, level)
+      processedEvents.add(candidate)
+
+      // Remove from unassigned
+      const index = unassignedEvents.indexOf(candidate)
+      if (index > -1) {
+        unassignedEvents.splice(index, 1)
+      }
+    }
+
+    clusters.push(cluster)
+  }
+
+  return clusters
+}
+
+
 
 export function convertHierarchicalToStandardClusters(hierarchicalClusters) {
   return hierarchicalClusters.map(cluster => {
