@@ -8,7 +8,8 @@ import {
   longHexRegex,
   pidRegex,
   jwtRegex,
-  emailRegex
+  emailRegex,
+  storyMarkerRegex
 } from '../config.js'
 import { logPipelineConfig } from './pipeline-config.js'
 import { Compression } from '../utils/compression.js'
@@ -67,6 +68,7 @@ export function normalizeLine(line) {
 }
 
 export function isNoise(line) {
+  if (storyMarkerRegex.test(line)) return false
   return NOISE_PATTERNS.some((pattern) => pattern.test(line))
 }
 
@@ -186,6 +188,11 @@ export function lineScore(line, debugCollector) {
     if (debugCollector) {
       debugCollector.push({ reason, delta })
     }
+  }
+
+  if (storyMarkerRegex.test(line)) {
+    record(100, 'story-marker')
+    return score // Return early or accumulate? Usually story marker is high value enough.
   }
 
   const statusMatch = line.match(/\b([1-5]\d{2})\b/)
@@ -308,6 +315,7 @@ export function eventBoundary(line, hasCurrent) {
   const trimmed = line.trim()
   if (trimmed === '') return hasCurrent
   if (!hasCurrent) return false
+  if (storyMarkerRegex.test(trimmed)) return true
   if (/^\d{4}-\d{2}-\d{2}/.test(trimmed)) return true
   if (/^[A-Za-z0-9_.-]+:\d+/.test(trimmed)) return true
   if (/^\[[^\]]+\]/.test(trimmed)) return true

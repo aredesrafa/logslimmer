@@ -27,6 +27,16 @@ export const pidRegex = /(pid|processId|process_id)=([0-9]+)/i
 export const jwtRegex = /eyJ[\w-]+\.[\w-]+\.[\w-]+/g
 export const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi
 
+/**
+ * Regex for detecting manual story markers in logs
+ * Matches:
+ * - #1. Text
+ * - 2. Text
+ * - 8.o Text
+ * - 11. Text
+ */
+export const storyMarkerRegex = /^#?\d+(?:\.o|\.|\))\s+.+/i
+
 export const config = {
   /**
    * Default compression mode
@@ -99,6 +109,11 @@ export const config = {
 }
 
 export const CATEGORY_RULES = [
+  {
+    name: 'Story',
+    priority: 0, // Highest priority
+    test: storyMarkerRegex
+  },
   {
     name: 'Authentication',
     priority: 5,

@@ -33,15 +33,21 @@ async function compressLog(inputText = '') {
           : event.score > logPipelineConfig.scoreCutoffOther
       )
   )
+
+  // Extract Story markers
+  const storyMarkerEvents = relevantEvents.filter(e => e.primaryCategory === 'Story')
+  const clusterableEvents = relevantEvents.filter(e => e.primaryCategory !== 'Story')
+
   if (typeof console !== 'undefined') {
     console.log('[worker] Relevant events:', relevantEvents.length)
+    console.log('[worker] Story markers:', storyMarkerEvents.length)
   }
 
   if (typeof console !== 'undefined') {
     console.log('[worker] Starting cluster building...')
   }
 
-  const clusters = await buildClustersNoEmbeddings(relevantEvents, similarityWorkerPool)
+  const clusters = await buildClustersNoEmbeddings(clusterableEvents, similarityWorkerPool)
 
   if (typeof console !== 'undefined') {
     console.log('[worker] Clusters built:', clusters.length)
@@ -62,6 +68,15 @@ async function compressLog(inputText = '') {
   const summary = buildErrorSummary(filteredClusters)
   if (typeof console !== 'undefined') {
     console.log('[worker] Summary built, length:', summary.length)
+  }
+
+  // Build Scenario Reconstruction
+  let storySection = ''
+  if (storyMarkerEvents.length > 0) {
+    storySection = '## Scenario Reconstruction\n' + storyMarkerEvents
+      .sort((a, b) => a.order - b.order)
+      .map(e => e.processedLines.join('\n'))
+      .join('\n\n')
   }
 
   const clustersToRender = filteredClusters.slice(0, logPipelineConfig.maxClusters)
@@ -92,7 +107,7 @@ async function compressLog(inputText = '') {
 
   const uniqueSection = formatUniqueEvents(uniqueEvents, logPipelineConfig.miscUniqueLimit)
 
-  const result = [summary, '## Event Clusters', clustersSection, uniqueSection]
+  const result = [storySection, summary, '## Event Clusters', clustersSection, uniqueSection]
     .filter(Boolean)
     .join('\n\n')
 
