@@ -62,7 +62,7 @@ export function calculateAdaptiveThresholds(events) {
 /**
  * Build clusters using the text-based strategy
  */
-export async function buildClustersNoEmbeddings(events) {
+export async function buildClustersNoEmbeddings(events, workerPool = null) {
   const validator = createInputValidator()
 
   // Validate input events
@@ -88,7 +88,7 @@ export async function buildClustersNoEmbeddings(events) {
   // Use hierarchical clustering if enabled (now optimized with LSH for larger datasets)
   if (ENHANCED_FEATURES.hierarchicalClustering) {
     logger.log('Using optimized hierarchical clustering with LSH')
-    return buildClustersHierarchical(events, adaptiveThresholds)
+    return buildClustersHierarchical(events, adaptiveThresholds, workerPool)
   }
 
   logger.log('Using enhanced adaptive clustering (text-based strategy)')

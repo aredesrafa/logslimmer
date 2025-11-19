@@ -11,6 +11,7 @@ import {
   emailRegex
 } from '../config.js'
 import { logPipelineConfig } from './pipeline-config.js'
+import { Compression } from '../utils/compression.js'
 
 const NOISE_PATTERNS = logPipelineConfig.noisePatterns
 const MESSAGE_WEIGHTS = logPipelineConfig.messageWeights
@@ -331,7 +332,11 @@ export function createEvent(lines) {
   const { categories, primaryCategory } = categorizeEvent(foldedLines)
 
   return {
-    originalLines: lines,
+    _compressedOriginalLines: Compression.compress(lines.join('\n')),
+    get originalLines() {
+      const decompressed = Compression.decompress(this._compressedOriginalLines)
+      return decompressed ? decompressed.split('\n') : []
+    },
     processedLines: foldedLines,
     templateLines,
     variables,

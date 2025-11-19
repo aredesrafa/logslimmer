@@ -3,6 +3,11 @@ import { buildClustersNoEmbeddings } from './log-pipeline/cluster-builder-no-emb
 import { buildErrorSummary, formatCluster, formatUniqueEvents } from './log-pipeline/output-formatter.js'
 import { logPipelineConfig } from './log-pipeline/pipeline-config.js'
 import { setupWorker } from './utils/worker-setup.js'
+import { WorkerPool } from './utils/worker-pool.js'
+
+// Initialize worker pool for parallel processing
+// Vite handles the URL resolution correctly during build
+const similarityWorkerPool = new WorkerPool(new URL('./worker-similarity.js', import.meta.url))
 
 async function compressLog(inputText = '') {
 
@@ -36,7 +41,7 @@ async function compressLog(inputText = '') {
     console.log('[worker] Starting cluster building...')
   }
 
-  const clusters = await buildClustersNoEmbeddings(relevantEvents)
+  const clusters = await buildClustersNoEmbeddings(relevantEvents, similarityWorkerPool)
 
   if (typeof console !== 'undefined') {
     console.log('[worker] Clusters built:', clusters.length)

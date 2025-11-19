@@ -182,19 +182,57 @@ class HierarchicalCluster {
 }
 
 /**
+ * Helper to chunk array for parallel processing
+ */
+function chunkArray(array, size) {
+  const chunks = []
+  for (let i = 0; i < array.length; i += size) {
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+
+/**
  * Perform hierarchical clustering on log events using LSH for efficiency
  */
-export function performHierarchicalClustering(events, adaptiveThresholds) {
+export async function performHierarchicalClustering(events, adaptiveThresholds, workerPool = null) {
   console.log('[hierarchical] Starting optimized hierarchical clustering with', events.length, 'events')
 
   // Precompute MinHash signatures for all events
   const minHash = new MinHash(100) // 100 hash functions
   const eventSignatures = new Map()
 
-  for (const event of events) {
-    const tokens = tokenizeForSimilarity(event.signature)
-    const signature = minHash.computeSignature(tokens)
-    eventSignatures.set(event, signature)
+  // Threshold for enabling parallel processing
+  const PARALLEL_THRESHOLD = 500 
+
+  if (workerPool && workerPool.isOperational && events.length >= PARALLEL_THRESHOLD) {
+    console.log('[hierarchical] Parallelizing signature computation...')
+    const chunks = chunkArray(events, Math.ceil(events.length / workerPool.size))
+    
+    const promises = chunks.map(async (chunk) => {
+      // Extract signatures to send to worker (lightweight)
+      const chunkData = chunk.map(e => e.signature)
+      const result = await workerPool.run('computeSignatures', { events: chunkData })
+      return { chunk, results: result.results }
+    })
+
+    const parallelResults = await Promise.all(promises)
+
+    // Merge results
+    for (const { chunk, results } of parallelResults) {
+      for (let i = 0; i < chunk.length; i++) {
+        const event = chunk[i]
+        const { signature } = results[i] // We could also use tokens if needed
+        eventSignatures.set(event, signature)
+      }
+    }
+  } else {
+    // Fallback to sequential
+    for (const event of events) {
+      const tokens = tokenizeForSimilarity(event.signature)
+      const signature = minHash.computeSignature(tokens)
+      eventSignatures.set(event, signature)
+    }
   }
 
   // Build LSH index
@@ -339,7 +377,7 @@ export function convertHierarchicalToStandardClusters(hierarchicalClusters) {
 /**
  * Enhanced clustering with hierarchical approach
  */
-export function buildClustersHierarchical(events, adaptiveThresholds) {
-  const hierarchicalClusters = performHierarchicalClustering(events, adaptiveThresholds)
+export async function buildClustersHierarchical(events, adaptiveThresholds, workerPool = null) {
+  const hierarchicalClusters = await performHierarchicalClustering(events, adaptiveThresholds, workerPool)
   return convertHierarchicalToStandardClusters(hierarchicalClusters)
 }
