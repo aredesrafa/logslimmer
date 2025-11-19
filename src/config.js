@@ -39,6 +39,16 @@ export const storyMarkerRegex = /^#?\d+(?:\.o|\.|\))\s+.+/i
 
 export const config = {
   /**
+   * Patterns that identify "Application Logic" or critical context
+   * These events will be interleaved with the scenario reconstruction
+   * even if they are not story markers.
+   */
+  contextPatterns: [
+    /(Form .* changed|submitChanges|Updating FlowVersion|Error:|\[Error)/i,
+    /Console/i
+  ],
+
+  /**
    * Default compression mode
    * 'semantic': Uses semantic analysis (agnostic)
    * 'regex': Uses hardcoded patterns (fast but specific)

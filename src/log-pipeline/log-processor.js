@@ -13,6 +13,7 @@ import {
 } from '../config.js'
 import { logPipelineConfig } from './pipeline-config.js'
 import { Compression } from '../utils/compression.js'
+import { normalizeFuzzyLatency } from '../utils/normalization-utils.js'
 
 const NOISE_PATTERNS = logPipelineConfig.noisePatterns
 const MESSAGE_WEIGHTS = logPipelineConfig.messageWeights
@@ -44,7 +45,7 @@ export function redactSensitiveData(lines) {
 
 export function normalizeLine(line) {
   let normalized = line
-  normalized = normalized.replace(/ in \d+ms/g, ' in XXXms')
+  normalized = normalized.replace(/ in (\d+)ms/g, normalizeFuzzyLatency)
   normalized = normalized.replace(/\?v=[\w-]+/g, '?v=VERSION')
   normalized = normalized.replace(/(token|authorization)=([A-Za-z0-9._-]+)/gi, '$1={TOKEN}')
   normalized = normalized.replace(/flowId: [\w-]+/g, 'flowId: ID')

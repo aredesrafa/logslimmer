@@ -4,6 +4,7 @@ import { buildErrorSummary, formatCluster, formatUniqueEvents } from './log-pipe
 import { logPipelineConfig } from './log-pipeline/pipeline-config.js'
 import { setupWorker } from './utils/worker-setup.js'
 import { WorkerPool } from './utils/worker-pool.js'
+import { reconstructScenario } from './log-pipeline/scenario-reconstructor.js'
 
 // Initialize worker pool for parallel processing
 // Vite handles the URL resolution correctly during build
@@ -34,13 +35,15 @@ async function compressLog(inputText = '') {
       )
   )
 
-  // Extract Story markers
-  const storyMarkerEvents = relevantEvents.filter(e => e.primaryCategory === 'Story')
-  const clusterableEvents = relevantEvents.filter(e => e.primaryCategory !== 'Story')
+  // Build Narrative with Context Interleaving
+  const { storyText, usedEventIds } = reconstructScenario(relevantEvents)
+  
+  // Filter out events already used in the story to avoid duplication in clusters
+  const clusterableEvents = relevantEvents.filter(e => !usedEventIds.has(e.order))
 
   if (typeof console !== 'undefined') {
     console.log('[worker] Relevant events:', relevantEvents.length)
-    console.log('[worker] Story markers:', storyMarkerEvents.length)
+    console.log('[worker] Scenario events:', usedEventIds.size)
   }
 
   if (typeof console !== 'undefined') {
@@ -68,15 +71,6 @@ async function compressLog(inputText = '') {
   const summary = buildErrorSummary(filteredClusters)
   if (typeof console !== 'undefined') {
     console.log('[worker] Summary built, length:', summary.length)
-  }
-
-  // Build Scenario Reconstruction
-  let storySection = ''
-  if (storyMarkerEvents.length > 0) {
-    storySection = '## Scenario Reconstruction\n' + storyMarkerEvents
-      .sort((a, b) => a.order - b.order)
-      .map(e => e.processedLines.join('\n'))
-      .join('\n\n')
   }
 
   const clustersToRender = filteredClusters.slice(0, logPipelineConfig.maxClusters)
@@ -107,7 +101,7 @@ async function compressLog(inputText = '') {
 
   const uniqueSection = formatUniqueEvents(uniqueEvents, logPipelineConfig.miscUniqueLimit)
 
-  const result = [storySection, summary, '## Event Clusters', clustersSection, uniqueSection]
+  const result = [storyText, summary, '## Event Clusters', clustersSection, uniqueSection]
     .filter(Boolean)
     .join('\n\n')
 
