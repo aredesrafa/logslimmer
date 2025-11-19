@@ -1,0 +1,22 @@
+#1. Flow carrega
+Terminal:
+ GET /api/payload-preferences/locale 200 in 10037ms
+ GET /api/payload-preferences/nav 200 in 9833ms
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+
+2. Clico no primeiro node 
+terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 174ms
+index.tsx:211 [StepSettings] Form sheetId changed: 934008445
+[FLOW VERSIONS] beforeChange - operation: update
+ POST /api/graphql 200 in 5409ms
+
+3. Mudo o sheet (dropdown) para uma pagina
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1171ms
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:324 submitChanges - Final Settings: { sheetId: 0 }
+
+8.o Retorno para o segundo node
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 153ms

@@ -1,0 +1,2168 @@
+#1. Flow carrega
+Terminal:
+ GET /api/payload-preferences/locale 200 in 10037ms
+ GET /api/payload-preferences/nav 200 in 9833ms
+ POST /api/tenants 200 in 9847ms
+ GET /api/users/me 500 in 10166ms
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 10287ms
+ GET /api/payload-preferences/locale 200 in 72ms
+ ○ Compiling /app/workflows/[flowId]/edit ...
+ ✓ Compiled /app/workflows/[flowId]/edit in 3.6s (5359 modules)
+ ✓ Compiled in 474ms (1286 modules)
+Generating import map
+No new imports found, skipping writing import map
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 3868ms
+ GET /api/payload-preferences/locale 200 in 178ms
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+[WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+[WORKFLOW_EDITOR] Token resolved: provided
+ GET /app/workflows/acac59bb-ac25-4bf7-9e31-037628977de8/edit 200 in 10401ms
+ ○ Compiling /api/workflows/pieces/catalog ...
+ ✓ Compiled /api/workflows/pieces/catalog in 6.9s (5341 modules)
+Generating import map
+No new imports found, skipping writing import map
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+[CATALOG CORS] Headers set for origin: http://localhost:5161
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 13188ms
+[WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+[WORKFLOW_EDITOR] Token resolved: provided
+ GET /app/workflows/acac59bb-ac25-4bf7-9e31-037628977de8/edit 200 in 9844ms
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+[CATALOG CORS] Headers set for origin: http://localhost:5161
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 542ms
+ ○ Compiling /api/flow-versions ...
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 10657ms
+ ✓ Compiled /api/flow-versions in 2.2s (5340 modules)
+ GET /api/payload-preferences/locale 200 in 2084ms
+ GET /api/flow-versions 200 in 3562ms
+ GET /api/flow-versions 200 in 107ms
+ ○ Compiling /api/graphql ...
+ ✓ Compiled /api/graphql in 4.2s (5344 modules)
+ POST /api/graphql 200 in 6931ms
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 230ms
+ ○ Compiling /api/app/connections ...
+ ✓ Compiled /api/app/connections in 2.6s (5347 modules)
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 3462ms
+ GET /api/app/connections?scope=tenant&limit=20&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 3771ms
+ GET /api/app/connections?scope=tenant&limit=20&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 152ms
+ ○ Compiling /api/flow-runs ...
+ ✓ Compiled /api/flow-runs in 1812ms (5349 modules)
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 2565ms
+
+
+Console
+react-dom-client.development.js:25631 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+page.tsx:21  Server  [WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+page.tsx:107  Server  [WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+client:733 [vite] connecting...
+client:827 [vite] connected.
+apollo3-cache-persist.js?v=486eb5ec:22 [apollo-cache-persist] Debounce is not recommended with `background` trigger
+Log2.emit @ apollo3-cache-persist.js?v=486eb5ec:22
+apollo3-cache-persist.js?v=486eb5ec:22 [apollo-cache-persist] Trigger option `background` not available on web; using `write` trigger
+Log2.emit @ apollo3-cache-persist.js?v=486eb5ec:22
+cache-persistence.js:54 [ApolloCachePersistence] Cache persistence initialized: apollo-cache-9e6173cc-84c8-4148-9639-cc4cbc6d8cf1-dd3355da-0072-4dd9-afba-0ad024cd9327
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: undefined
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: undefined
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 2701ms
+registry.ts:222 [PIECES] Loaded from backend: {count: 19, url: 'http://localhost:5175/api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327'}
+App.tsx:170 [WORKFLOW_LOADER] Fetching workflow acac59bb-ac25-4bf7-9e31-037628977de8 from http://localhost:5175/api/flow-versions
+page.tsx:21  Server  [WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+page.tsx:107  Server  [WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+registry.ts:222 [PIECES] Loaded from backend: {count: 19, url: 'http://localhost:5175/api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327'}
+App.tsx:170 [WORKFLOW_LOADER] Fetching workflow acac59bb-ac25-4bf7-9e31-037628977de8 from http://localhost:5175/api/flow-versions
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 991ms
+App.tsx:180 [WORKFLOW_LOADER] Workflow list loaded: {docs: Array(1), hasNextPage: false, hasPrevPage: false, limit: 25, nextPage: null, …}
+App.tsx:180 [WORKFLOW_LOADER] Workflow list loaded: {docs: Array(1), hasNextPage: false, hasPrevPage: false, limit: 25, nextPage: null, …}
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327', token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllN…g5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU', apiBase: 'http://localhost:5175', userId: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1', …}
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327', token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllN…g5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU', apiBase: 'http://localhost:5175', userId: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1', …}
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:44 [EditorClient] FlowVersion ID from URL: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:44 [EditorClient] FlowVersion ID from URL: 072924ab-ffec-4f4b-b296-ad1669450d82
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 4360ms
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 1313ms
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 1396ms
+
+
+2. Clico no primeiro node 
+terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 174ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 184ms
+ ○ Compiling /api/workflows/pieces/options ...
+ ✓ Compiled /api/graphql in 4.4s (5361 modules)
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 6204ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 6745ms
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 5409ms
+Connection update: {
+  id: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH] Refreshing token {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7'
+}
+Connection update: {
+  id: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH APPS] Would encrypt client secret for Google
+[OAUTH] Refreshing token {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  oauthAppId: '2ab43210-5675-40c2-9897-95cd8141f8f7'
+}
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+[OAUTH APPS] Would encrypt client secret for Google
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 296ms
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+ POST /api/graphql 200 in 644ms
+Connection update: {
+  id: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH] Token refreshed successfully {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  expiresAt: '2025-11-19T12:24:29.448Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth from getAuthorizedClient {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tokenPreview: 'ya29.a0ATi6K2srP089G...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  hasRefreshToken: true,
+  expiresAt: '2025-11-19T12:24:29.448Z'
+}
+[PIECES:OPTIONS] Set context.auth with fresh token { tokenPreview: 'ya29.a0ATi6K2srP089G...' }
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [ 'spreadsheetId' ],
+  spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M',
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+Connection update: {
+  id: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+[CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+[CONNECTIONS] Connection registered successfully: Google Sheets
+[OAUTH] Token refreshed successfully {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  expiresAt: '2025-11-19T12:24:29.598Z'
+}
+[PIECES:OPTIONS] Hydrated connection auth from getAuthorizedClient {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tokenPreview: 'ya29.a0ATi6K2ue4-9kf...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  hasRefreshToken: true,
+  expiresAt: '2025-11-19T12:24:29.598Z'
+}
+[PIECES:OPTIONS] Set context.auth with fresh token { tokenPreview: 'ya29.a0ATi6K2ue4-9kf...' }
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [ 'includeTeamDrives' ],
+  spreadsheetId: undefined,
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[OAUTH APPS] Would encrypt client secret for Google
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+[OAUTH APPS] Would encrypt client secret for Google
+OAuth App update: {
+  id: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  name: 'Google',
+  provider: 'google',
+  status: 'active',
+  tenant: undefined,
+  user: undefined
+}
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+[OAUTH APPS] OAuth app registered successfully: Google
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 2
+}
+ POST /api/workflows/pieces/options 200 in 8516ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 95ms
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 254
+}
+ POST /api/workflows/pieces/options 200 in 10119ms
+
+
+
+Console:
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:211 [StepSettings] Form sheetId changed: 934008445
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:211 [StepSettings] Form sheetId changed: 934008445
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'New Row Added', stepName: 'trigger', stepKey: 'trigger:trigger', timestamp: 1763551462507}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 184ms
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551463572}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+report-hmr-latency.js:14 [Fast Refresh] done in 1778ms
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+report-hmr-latency.js:14 [Fast Refresh] done in 772ms
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 84ms
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 419ms
+
+
+3. Mudo o sheet (dropdown) para uma pagina
+Terminal:
+ET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1171ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1075ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 657ms
+ POST /api/graphql 200 in 376ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 120ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 352ms
+
+
+Console:
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 0
+react-dom_client.js?v=202fffad:13527 [Violation] 'pointerup' handler took 462ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551521157}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 360ms
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 344ms
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+
+
+
+4. Clico no segundo node 
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 137ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 201ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 120ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 551ms
+ POST /api/graphql 200 in 329ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 793ms
+
+
+Console: 
+
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763490033683', stepKey: 'action:step_1763490033683', timestamp: 1763551580742}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 514ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551581821}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 379ms
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 83ms
+
+
+
+5. Seleciono uma opcao no dropdown de sheet do segundo node
+terminal
+355da-0072-4dd9-afba-0ad024cd9327 200 in 124ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 330ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 109ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 149ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 723ms
+ POST /api/graphql 200 in 404ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 122ms
+
+
+
+Console: 
+
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 934008445
+react-dom_client.js?v=202fffad:13527 [Violation] 'pointerup' handler took 385ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551642542}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 352ms
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 355ms
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+
+
+
+6. Clico novamente no node anterior (valor anterior está persistido)
+
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 105ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 105ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 320ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 154ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 63ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 945ms
+ POST /api/graphql 200 in 749ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 100ms
+
+
+Console:
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'New Row Added', stepName: 'trigger', stepKey: 'trigger:trigger', timestamp: 1763551691410}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 0
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 500ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551692770}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 349ms
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+
+
+
+7. Mudo o valor do drodown para outra opcao (do node selecionado):
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 95ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 173ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 126ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 819ms
+ POST /api/graphql 200 in 315ms
+ 
+ 
+ Console:
+ index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 934008445
+react-dom_client.js?v=202fffad:13527 [Violation] 'pointerup' handler took 376ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551776944}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 364ms
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 403ms
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+
+
+
+8.o Retorno para o segundo node, clicando nele (valor está persistido)
+
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 153ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 131ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 314ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 203ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 528ms
+ POST /api/graphql 200 in 310ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 130ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 123ms
+
+
+Console:
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763490033683', stepKey: 'action:step_1763490033683', timestamp: 1763551825973}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 495ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551827048}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 348ms
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 363ms
+
+
+9. Sem alterar o node retorno para o primeiro, clicando-o  (valor continua persistido)
+
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 153ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 131ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 314ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 203ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 528ms
+ POST /api/graphql 200 in 310ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 130ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 123ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 113ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 276ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 133ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 93ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 214ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 145ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 113ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1734ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 504ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 453ms
+ POST /api/graphql 200 in 604ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 91ms
+
+
+10. Clico entre um e outro de forma rápida, afim de extressar a interface. 
+terminal
+
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 191ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 134ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 114ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 110ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 131ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 119ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 227ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 117ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 1448ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 879ms
+ POST /api/graphql 200 in 998ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1006ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 1124ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 1035ms
+ POST /api/graphql 200 in 329ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 358ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 101ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 425ms
+ POST /api/graphql 200 in 275ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 343ms
+
+
+Console
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763490033683', stepKey: 'action:step_1763490033683', timestamp: 1763551980122}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 496ms
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'New Row Added', stepName: 'trigger', stepKey: 'trigger:trigger', timestamp: 1763551981052}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 425ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551982107}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 340ms
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763490033683', stepKey: 'action:step_1763490033683', timestamp: 1763551982471}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 152ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551983488}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'New Row Added', stepName: 'trigger', stepKey: 'trigger:trigger', timestamp: 1763551984904}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 473ms
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 58ms
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 361ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763551987231}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 335ms
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 55ms
+
+
+
+
+11. Interajo de maneira rápida e repetiviva alterando as opcoes de sheet de um node e de outro
+
+terminal:
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 278ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 243ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 535ms
+ POST /api/graphql 200 in 447ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 67ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 566ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 596ms
+ POST /api/graphql 200 in 639ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 756ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 374ms
+ POST /api/graphql 200 in 329ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 322ms
+ POST /api/graphql 200 in 285ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 83ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 83ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 315ms
+ POST /api/graphql 200 in 317ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 80ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 115ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 952ms
+
+
+
+Console:
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763490033683', stepKey: 'action:step_1763490033683', timestamp: 1763552050271}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 577ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763552051405}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 332ms
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 0
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 392ms
+index.tsx:400 [StepSettings] Real changes detected on blur, submitting: {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763552053500}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'focusout' handler took 364ms
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'New Row Added', stepName: 'trigger', stepKey: 'trigger:trigger', timestamp: 1763552053890}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 934008445
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '934008445', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 351ms
+index.tsx:400 [StepSettings] Real changes detected on blur, submitting: {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763552056377}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:211 [StepSettings] Form sheetId changed: 0
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 361ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763552058524}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 352ms
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:396 [StepSettings] No real changes detected on blur, skipping submission
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763490033683', stepKey: 'action:step_1763490033683', timestamp: 1763552059480}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 358ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763552060495}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+
+
+
+12. Fecho o flow, e reabro
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 171ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 101ms
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+[WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+[WORKFLOW_EDITOR] Token resolved: provided
+ GET /app/workflows/acac59bb-ac25-4bf7-9e31-037628977de8/edit 200 in 1752ms
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+[CATALOG CORS] Headers set for origin: http://localhost:5161
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 137ms
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+[CATALOG CORS] Headers set for origin: http://localhost:5161
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 126ms
+ ○ Compiling /api/flow-versions ...
+ ✓ Compiled /api/flow-versions in 5.2s (3904 modules)
+ GET /api/flow-versions 200 in 6409ms
+ GET /api/flow-versions 200 in 75ms
+ ○ Compiling /api/graphql ...
+ ✓ Compiled /api/graphql in 739ms (4070 modules)
+ POST /api/graphql 200 in 2973ms
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 164ms
+ ○ Compiling /api/app/connections ...
+ ✓ Compiled /api/app/connections in 807ms (4073 modules)
+ GET /api/app/connections?scope=tenant&limit=20&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 3011ms
+[REGISTRY] Skipping legacy piece - invalid structure { hasDefinition: false, hasName: undefined, hasExecute: true }
+[PAYLOAD PIECES] Native pieces registered { count: 14 }
+[PAYLOAD PIECES] registerActivepiecesPieces - approved pieces: {
+  count: 5,
+  keys: [
+    'http/request',
+    'data/mapper',
+    'approval/wait-for-approval',
+    'tables/find-records',
+    'google-sheets'
+  ]
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'http/request',
+  definition: 'activepieces:http/request'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered { approvedKey: 'data/mapper', definition: 'activepieces:data/mapper' }
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'approval/wait-for-approval',
+  definition: 'activepieces:approval/wait-for-approval'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'tables/find-records',
+  definition: 'activepieces:tables/find-records'
+}
+[PAYLOAD PIECES] Activepieces wrapper registered {
+  approvedKey: 'google-sheets',
+  definition: 'activepieces:google-sheets'
+}
+[PAYLOAD PIECES] Registry initialized { total: 19 }
+[CATALOG] Returning catalog: {
+  native: 14,
+  activepieces: 5,
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[CATALOG CORS] {
+  origin: '(empty - Vite proxy)',
+  isDev: true,
+  nodeEnv: 'development',
+  allowedMfeOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: false
+}
+[CATALOG CORS] Allowing empty origin (Vite proxy in dev)
+[CATALOG CORS] Headers set for origin: *
+ GET /api/workflows/pieces/catalog?tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 2851ms
+ GET /api/app/connections?scope=tenant&limit=20&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 98ms
+
+
+Console
+client:733 [vite] connecting...
+client:827 [vite] connected.
+apollo3-cache-persist.js?v=486eb5ec:22 [apollo-cache-persist] Debounce is not recommended with `background` trigger
+Log2.emit @ apollo3-cache-persist.js?v=486eb5ec:22
+apollo3-cache-persist.js?v=486eb5ec:22 [apollo-cache-persist] Trigger option `background` not available on web; using `write` trigger
+Log2.emit @ apollo3-cache-persist.js?v=486eb5ec:22
+cache-persistence.js:54 [ApolloCachePersistence] Cache persistence initialized: apollo-cache-9e6173cc-84c8-4148-9639-cc4cbc6d8cf1-dd3355da-0072-4dd9-afba-0ad024cd9327
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: undefined
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: undefined
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+registry.ts:222 [PIECES] Loaded from backend: Object
+App.tsx:170 [WORKFLOW_LOADER] Fetching workflow acac59bb-ac25-4bf7-9e31-037628977de8 from http://localhost:5175/api/flow-versions
+registry.ts:222 [PIECES] Loaded from backend: Object
+App.tsx:170 [WORKFLOW_LOADER] Fetching workflow acac59bb-ac25-4bf7-9e31-037628977de8 from http://localhost:5175/api/flow-versions
+react-dom-client.development.js:25631 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+page.tsx:21  Server  [WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+page.tsx:107  Server  [WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+App.tsx:180 [WORKFLOW_LOADER] Workflow list loaded: Object
+App.tsx:180 [WORKFLOW_LOADER] Workflow list loaded: Object
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: Object
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+App.tsx:38 window.flowEditorConfig: Object
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjE3M2NjLTg0YzgtNDE0OC05NjM5LWNjNGNiYzZkOGNmMSIsImNvbGxlY3Rpb24iOiJ1c2VycyIsImVtYWlsIjoiYXJlZGVzcmFmYWVsQGdtYWlsLmNvbSIsInNpZCI6IjFlYzUxOGU2LWZkOGItNDdiYy05NWE5LWI3N2U4N2M0MjJjZCIsInRlbmFudHMiOltdLCJpYXQiOjE3NjM1NDY2OTYsImV4cCI6MTc2MzU1Mzg5Nn0.6THvuaDEa_AfKVMcqNNjOJpg1hPKLaIGwLz1BBnodKU
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: Object
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: Object
+ReactEditorClient.tsx:44 [EditorClient] FlowVersion ID from URL: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:44 [EditorClient] FlowVersion ID from URL: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: Object
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: Object
+
+
+
+13. confiro clicando em cada um dos nodes apenas para ler as informacoes (há um tempo considerável de carregamento, levando vários segundos na primeira vez)
+Terminal:
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 112ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 526ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 199ms
+ ⨯ [Error: aborted]
+ ⨯ [Error: aborted]
+ ○ Compiling /_error ...
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 666ms
+ POST /api/graphql 200 in 389ms
+ ✓ Compiled /api/workflows/pieces/options in 11s (5797 modules)
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 9219ms
+[PIECES:OPTIONS] Hydrated connection auth from getAuthorizedClient {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tokenPreview: 'ya29.a0ATi6K2ue4-9kf...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  hasRefreshToken: true,
+  expiresAt: '2025-11-19T12:24:29.598Z'
+}
+[PIECES:OPTIONS] Set context.auth with fresh token { tokenPreview: 'ya29.a0ATi6K2ue4-9kf...' }
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  hasAuth: true,
+  propsValueKeys: [ 'includeTeamDrives' ],
+  spreadsheetId: undefined,
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECES:OPTIONS] Hydrated connection auth from getAuthorizedClient {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tokenPreview: 'ya29.a0ATi6K2ue4-9kf...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  hasRefreshToken: true,
+  expiresAt: '2025-11-19T12:24:29.598Z'
+}
+[PIECES:OPTIONS] Set context.auth with fresh token { tokenPreview: 'ya29.a0ATi6K2ue4-9kf...' }
+[PIECES:OPTIONS] Evaluating property {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  hasAuth: true,
+  propsValueKeys: [ 'spreadsheetId' ],
+  spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M',
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tenantId: 'dd3355da-0072-4dd9-afba-0ad024cd9327'
+}
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 19098ms
+[WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+[WORKFLOW_EDITOR] Token resolved: provided
+ GET /app/workflows/acac59bb-ac25-4bf7-9e31-037628977de8/edit 200 in 15598ms
+[WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'sheetId',
+  kind: 'dropdown',
+  optionsCount: 2
+}
+ POST /api/workflows/pieces/options 200 in 20996ms
+[WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+[WORKFLOW_EDITOR] Token resolved: provided
+ GET /app/workflows/acac59bb-ac25-4bf7-9e31-037628977de8/edit 200 in 3545ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 3424ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 215ms
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 19315ms
+ GET /admin/collections/flows/acac59bb-ac25-4bf7-9e31-037628977de8 200 in 3822ms
+ ○ Compiling /api/[...slug] ...
+ ✓ Compiled /api/[...slug] in 943ms (4370 modules)
+[PIECES:OPTIONS] Property evaluated successfully {
+  piece: 'google-sheets',
+  property: 'spreadsheetId',
+  kind: 'dropdown',
+  optionsCount: 254
+}
+ POST /api/workflows/pieces/options 200 in 24227ms
+ GET /api/payload-preferences/locale 200 in 2045ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 292ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 168ms
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 154ms
+[FLOW VERSIONS] beforeChange - operation: update {
+  data: {
+    flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+    version: '0.1.0',
+    status: 'not_submitted',
+    definition: { type: 'object', hasSteps: 1, hasTrigger: true }
+  },
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+}
+ POST /api/graphql 200 in 747ms
+ POST /api/graphql 200 in 451ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 4188ms
+ GET /api/flow-runs?flowId=072924ab-ffec-4f4b-b296-ad1669450d82&limit=1&sort=-updatedAt&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 101ms
+
+
+
+Console:
+
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'trigger', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: null, triggerName: 'googlesheets_new_row_added', …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 4, inputNames: Array(4)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'trigger', displayName: 'New Row Added', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(8)}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:211 [StepSettings] Form sheetId changed: 0
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+index.tsx:211 [StepSettings] Form sheetId changed: 0
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'New Row Added', stepName: 'trigger', stepKey: 'trigger:trigger', timestamp: 1763552208503}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:990 [useDynamicPieceOptions] Preparing fetch {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', stepName: 'trigger'}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 169ms
+hot-reloader-app.js:197 [Fast Refresh] rebuilding
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'trigger', displayName: 'New Row Added'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'trigger', inputsKeys: Array(4), sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763552209562}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'trigger', stepType: 'trigger', displayName: 'New Row Added', settingsPieceName: 'activepieces:google-sheets', settingsActionName: undefined, …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 70ms
+report-hmr-latency.js:14 [Fast Refresh] done in 3915ms
+page.tsx:21  Server  [WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+page.tsx:107  Server  [WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+page.tsx:21  Server  [WORKFLOW_EDITOR] Starting for flowId: acac59bb-ac25-4bf7-9e31-037628977de8
+page.tsx:107  Server  [WORKFLOW_EDITOR] Found existing FlowVersion: 072924ab-ffec-4f4b-b296-ad1669450d82
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 480ms
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:628 [buildEditableSettings] Resolving inputs: {stepName: 'step_1763490033683', isTrigger: true, pieceEngineName: 'activepieces:google-sheets', actionName: 'insert_row', triggerName: null, …}
+index.tsx:687 [buildEditableSettings] Resolved inputs: {inputCount: 6, inputNames: Array(6)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+index.tsx:181 [StepSettings] DIAGNOSTIC_DUMP_V1: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', FULL_SETTINGS: {…}}
+index.tsx:189 [StepSettings] defaultValues computed: {stepName: 'step_1763490033683', displayName: 'Insert Row', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', settingsKeys: Array(10)}
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:916 [PIECE-SETTINGS] Cache hit (init): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+index.tsx:242 [StepSettings] FORM RESET START: {displayName: 'Insert Row', stepName: 'step_1763490033683', stepKey: 'action:step_1763490033683', timestamp: 1763552242044}
+index.tsx:250 [StepSettings] FORM RESET COMPLETE
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:spreadsheetId:{"includeTeamDrives":false}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:948 [PIECE-SETTINGS] Cache hit (effect): google-sheets:sheetId:{"spreadsheetId":"1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M"}:dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 494ms
+index.tsx:372 [StepSettings] Auto-saving changes... {stepName: 'step_1763490033683', displayName: 'Insert Row'}
+index.tsx:324 [StepSettings] submitChanges - Final Settings: {stepName: 'step_1763490033683', inputsKeys: Array(6), sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', timestamp: 1763552243119}
+use-flow-mutations.ts:63 [use-flow-mutations] Updating FlowVersion with ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 378ms
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+index.tsx:66 [StepSettings] Component mounted/updated - Full trigger: {triggerId: 'trigger', triggerDisplayName: 'New Row Added', triggerType: 'PIECE', triggerSettings: {…}, triggerNextAction: 'Insert Row'}
+index.tsx:149 [StepSettings] Step selected changed: {stepName: 'step_1763490033683', stepType: 'trigger', displayName: 'Insert Row', settingsPieceName: 'activepieces:google-sheets', settingsActionName: 'insert_row', …}
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:59 [EditorClient] Loading FlowVersion by ID: 072924ab-ffec-4f4b-b296-ad1669450d82
+ReactEditorClient.tsx:62 [EditorClient] Loaded Trigger Inputs: {info: '', sheetId: '0', spreadsheetId: '1kidAmhgjFNSlbCPkVU1EssvZBrlu4t9WllCu021xs6M', includeTeamDrives: false}
+ReactEditorClient.tsx:109 [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ [EditorClient] Final IDs: {flowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', flowVersionId: '072924ab-ffec-4f4b-b296-ad1669450d82', effectiveFlowId: 'acac59bb-ac25-4bf7-9e31-037628977de8', resolvedFlowVersionExists: true}
+ [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 378ms
+

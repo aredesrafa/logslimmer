@@ -1,0 +1,241 @@
+## Error Summary
+### Authentication (179 occurrences)
+- "piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback" (119×) — example: piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+- "App.tsx:37 App loaded, window.location.search: ?flow{ID}&flowVersion{ID}&tenant{ID}&token={JWT}&apiBase=http%3A%2F%2Flocalhost%3A5175&user{ID}" (8×) — example: App.tsx:37 App loaded, window.location.search: ?flowId=acac59bb-ac25-4bf7-9e31-037628977de8&flowVersionId=072924ab-ffec-4f4b-b296-ad1669450d82&tenantId=dd3355da…
+- "App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: {JWT}" (8×) — example: App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: {JWT}
+- "[WORKFLOW_EDITOR] Token resolved: provided" (5×) — example: [WORKFLOW_EDITOR] Token resolved: provided
+- "page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided" (5×) — example: page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+- … (13 additional patterns)
+### Network (55 occurrences)
+- "[PIECE CONNECTIONS CORS] {" (30×) — example: [PIECE CONNECTIONS CORS] {
+- "use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName…" (17×) — example: use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName…
+- "[CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4" (4×) — example: [CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+- "[CONNECTIONS] Connection registered successfully: Google Sheets" (4×) — example: [CONNECTIONS] Connection registered successfully: Google Sheets
+### Performance (4 occurrences)
+- "index.tsx:211 [StepSettings] Form sheetId changed: 0" (3×) — example: index.tsx:211 [StepSettings] Form sheetId changed: 0
+- "index.tsx:211 [StepSettings] Form sheetId changed: " (1×) — example: index.tsx:211 [StepSettings] Form sheetId changed: 
+### Error (2 occurrences)
+- " ⨯ [Error: aborted]" (2×) — example:  ⨯ [Error: aborted]
+
+## Event Clusters
+
+### Cluster 1 (83 occurrences)
+Representative: piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+Template (preview):
+- piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+Related categories: Authentication (83)
+Sample:
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+
+### Cluster 2 (35 occurrences)
+Representative: piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+Template (preview):
+- piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+- react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 184ms
+Related categories: Authentication (35)
+Sample:
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'click' handler took 184ms
+
+### Cluster 3 (30 occurrences)
+Representative: [PIECE CONNECTIONS CORS] {
+Template (preview):
+- [PIECE CONNECTIONS CORS] {
+-   origin: 'http://localhost:5161',
+-   isDev: true,
+Related categories: Network (30)
+Sample:
+[PIECE CONNECTIONS CORS] {
+  origin: 'http://localhost:5161',
+  isDev: true,
+  allowedOrigins: [ 'http://localhost:5150', 'http://localhost:5161' ],
+  matchesPattern: true
+}
+
+### Cluster 4 (28 occurrences)
+Representative:  GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenant{ID} 200 in 201ms
+Template (preview):
+-  GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenant{ID} 200 in 201ms
+Variables:
+- {ID}: dd3355da-0072-4dd9-afba-0ad024cd9327
+Related categories: Network (28)
+Sample:
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 201ms
+
+### Cluster 5 (17 occurrences)
+Representative: use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+Template (preview):
+- use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+Related categories: Network (17)
+Sample:
+use-flow-mutations.ts:64 [use-flow-mutations] Definition keys: (10) ['state', 'valid', 'flowId', 'trigger', 'agentIds', 'updatedBy', 'backupFiles', 'displayName', 'connectionIds', 'schemaVersion']
+
+### Cluster 6 (8 occurrences)
+Representative: App.tsx:37 App loaded, window.location.search: ?flow{ID}&flowVersion{ID}&tenant{ID}&token={JWT}&apiBase=http%3A%2F%2Flocalhost%3A5175&user{ID}
+Template (preview):
+- App.tsx:37 App loaded, window.location.search: ?flow{ID}&flowVersion{ID}&tenant{ID}&token={JWT}&apiBase=http%3A%2F%2Flocalhost%3A5175&user{ID}
+Variables:
+- {ID}: acac59bb-ac25-4bf7-9e31-037628977de8, 072924ab-ffec-4f4b-b296-ad1669450d82, dd3355da-0072-4dd9-afba-0ad024cd9327, 9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+Related categories: Authentication (8)
+Sample:
+App.tsx:37 … -afba-0ad024cd9327&token={JWT}&apiBase=http%3A%2F%2Flocalhost%3A5175&userId=9e6173cc-84c8-4148-9639-cc4cbc6d8cf1
+
+### Cluster 7 (8 occurrences)
+Representative: App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: {JWT}
+Template (preview):
+- App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: {JWT}
+Related categories: Authentication (8)
+Sample:
+App.tsx:49 Parsed params - flowId: acac59bb-ac25-4bf7-9e31-037628977de8 tenantId: dd3355da-0072-4dd9-afba-0ad024cd9327 token: {JWT}
+
+### Cluster 8 (5 occurrences)
+Representative: [WORKFLOW_EDITOR] Token resolved: provided
+Template (preview):
+- [WORKFLOW_EDITOR] Token resolved: provided
+Related categories: Authentication (5)
+Sample:
+[WORKFLOW_EDITOR] Token resolved: provided
+
+### Cluster 9 (4 occurrences)
+Representative: page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+Template (preview):
+- page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+Related categories: Authentication (4)
+Sample:
+page.tsx:153  Server  [WORKFLOW_EDITOR] Token resolved: provided
+
+### Cluster 10 (4 occurrences)
+Representative: [CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+Template (preview):
+- [CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+Related categories: Network (4)
+Sample:
+[CONNECTIONS] Registering connection dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4
+
+### Cluster 11 (4 occurrences)
+Representative: [CONNECTIONS] Connection registered successfully: Google Sheets
+Template (preview):
+- [CONNECTIONS] Connection registered successfully: Google Sheets
+Related categories: Network (4)
+Sample:
+[CONNECTIONS] Connection registered successfully: Google Sheets
+
+### Cluster 12 (4 occurrences)
+Representative: [OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+Template (preview):
+- [OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+Related categories: Authentication (4)
+Sample:
+[OAUTH APPS] Registering OAuth app 2ab43210-5675-40c2-9897-95cd8141f8f7 (google)
+
+### Cluster 13 (4 occurrences)
+Representative: [OAUTH APPS] OAuth app registered successfully: Google
+Template (preview):
+- [OAUTH APPS] OAuth app registered successfully: Google
+Related categories: Authentication (4)
+Sample:
+[OAUTH APPS] OAuth app registered successfully: Google
+
+### Cluster 14 (3 occurrences)
+Representative:  GET /api/app/connections?scope=tenant&limit=20&tenant{ID} 200 in 3771ms
+Template (preview):
+-  GET /api/app/connections?scope=tenant&limit=20&tenant{ID} 200 in 3771ms
+Variables:
+- {ID}: dd3355da-0072-4dd9-afba-0ad024cd9327
+Related categories: Network (3)
+Sample:
+ GET /api/app/connections?scope=tenant&limit=20&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 3771ms
+
+### Cluster 15 (3 occurrences)
+Representative: [PIECES:OPTIONS] Hydrated connection auth from getAuthorizedClient {
+Template (preview):
+- [PIECES:OPTIONS] Hydrated connection auth from getAuthorizedClient {
+-   connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+-   tokenPreview: 'ya29.a0ATi6K2ue4-9kf...',
+Related categories: Authentication (3)
+Sample:
+[PIECES:OPTIONS] Hydrated connection auth from getAuthorizedClient {
+  connectionId: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  tokenPreview: 'ya29.a0ATi6K2ue4-9kf...',
+  tokenType: 'Bearer',
+  scopeCount: 3,
+  scopes: [
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+… (3 lines omitted)
+
+### Cluster 16 (3 occurrences)
+Representative: [PIECES:OPTIONS] Set context.auth with fresh token { tokenPreview: 'ya29.a0ATi6K2ue4-9kf...' }
+Template (preview):
+- [PIECES:OPTIONS] Set context.auth with fresh token { tokenPreview: 'ya29.a0ATi6K2ue4-9kf...' }
+Related categories: Authentication (3)
+Sample:
+[PIECES:OPTIONS] Set context.auth with fresh token { tokenPreview: 'ya29.a0ATi6K2ue4-9kf...' }
+
+### Cluster 17 (3 occurrences)
+Representative: index.tsx:211 [StepSettings] Form sheetId changed: 0
+Template (preview):
+- index.tsx:211 [StepSettings] Form sheetId changed: 0
+- react-dom_client.js?v=202fffad:13527 [Violation] 'pointerup' handler took 462ms
+Related categories: Performance (3)
+Sample:
+index.tsx:211 [StepSettings] Form sheetId changed: 0
+react-dom_client.js?v=202fffad:13527 [Violation] 'pointerup' handler took 462ms
+
+### Cluster 18 (2 occurrences)
+Representative: App.tsx:38 … NjOJpg1hPKLaIGwLz1BBnodKU', apiBase: 'http://localhost:5175', userId: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1', …}
+Template (preview):
+- App.tsx:38 … NjOJpg1hPKLaIGwLz1BBnodKU', apiBase: 'http://localhost:5175', userId: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1', …}
+Related categories: Authentication (2)
+Sample:
+App.tsx:38 … NjOJpg1hPKLaIGwLz1BBnodKU', apiBase: 'http://localhost:5175', userId: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1', …}
+
+### Cluster 19 (2 occurrences)
+Representative:  POST /api/graphql 200 in 5409ms
+Template (preview):
+-  POST /api/graphql 200 in 5409ms
+- Connection update: {
+-   id: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+Related categories: Authentication (2)
+Sample:
+ POST /api/graphql 200 in 5409ms
+Connection update: {
+  id: 'dcdef9e0-dcf7-46d5-8fa8-e956b12a27c4',
+  displayName: 'Google Sheets',
+  oauthApp: '2ab43210-5675-40c2-9897-95cd8141f8f7',
+  status: 'active',
+  tenant: 'dd3355da-0072-4dd9-afba-0ad024cd9327',
+  user: undefined
+}
+
+### Cluster 20 (2 occurrences)
+Representative: [OAUTH APPS] Would encrypt client secret for Google
+Template (preview):
+- [OAUTH APPS] Would encrypt client secret for Google
+Related categories: Authentication (2)
+Sample:
+[OAUTH APPS] Would encrypt client secret for Google
+
+… (25 additional clusters omitted)
+
+
+## Unique Events
+- Order 125 | Score 17
+ GET /api/workflows/pieces/connections?piece=activepieces%3Agoogle-sheets&tenantId=dd3355da-0072-4dd9-afba-0ad024cd9327 200 in 6745ms
+Flow Version update: {
+  id: '072924ab-ffec-4f4b-b296-ad1669450d82',
+  flow: 'acac59bb-ac25-4bf7-9e31-037628977de8',
+  version: '0.1.0',
+  status: 'not_submitted',
+  createdBy: undefined,
+  user: '9e6173cc-84c8-4148-9639-cc4cbc6d8cf1'
+… (1 lines omitted)
+- Order 210 | Score 13
+piece-settings.tsx:437 [PieceSettings] Registering event listeners for OAuth callback
+react-dom_client.js?v=202fffad:13527 [Violation] 'setTimeout' handler took 84ms
+react-dom_client.js?v=202fffad:16 [Violation] 'message' handler took 419ms
+- Order 1021 | Score 6
+ ⨯ [Error: aborted]
+- … (2 additional unique events omitted)
