@@ -1,4 +1,4 @@
-import { optimize } from 'svgo/browser';
+import { optimize } from 'svgo';
 
 self.onmessage = (e) => {
     const { type, data, options } = e.data;
