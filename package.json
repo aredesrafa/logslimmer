@@ -27,6 +27,7 @@
   "type": "module",
   "dependencies": {
     "js-tiktoken": "^1.0.21",
-    "lucide-svelte": "^0.553.0"
+    "lucide-svelte": "^0.553.0",
+    "svgo": "^4.0.0"
   }
 }
