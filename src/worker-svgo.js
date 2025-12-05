@@ -49,7 +49,13 @@ self.onmessage = (e) => {
                         params: {
                             floatPrecision: 1,
                         }
-                    }
+                    },
+                    // Ordena atributos para melhor compressão e previsibilidade
+                    'sortAttrs',
+                    // Remove grupos inúteis
+                    'collapseGroups',
+                    // Remove imagens rasterizadas (base64) para economizar tokens
+                    'removeRasterImages',
                 ],
             });
 

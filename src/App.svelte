@@ -499,7 +499,7 @@
                             </button>
                             <button
                                 type="button"
-                                class="px-3 py-1 text-xs rounded-md transition-colors {compressionMode === 'svg' ? 'bg-purple-500 text-white' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700'}"
+                                class="px-3 py-1 text-xs rounded-md transition-colors {compressionMode === 'svg' ? 'bg-blue-500 text-white' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700'}"
                                 on:click={() => { compressionMode = 'svg'; handleModeChange(); }}
                             >
                                 SVG
@@ -669,7 +669,7 @@
                             id="fileInput"
                             type="file"
                             multiple
-                            accept=".txt,.log,.md,.csv,.svg"
+                            accept={compressionMode === 'svg' ? '.svg' : '.txt,.log,.md,.csv'}
                             on:change={handleFileInput}
                             bind:this={fileInputEl}
                             class="sr-only"
