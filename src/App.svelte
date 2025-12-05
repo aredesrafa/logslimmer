@@ -669,7 +669,7 @@
                             id="fileInput"
                             type="file"
                             multiple
-                            accept={compressionMode === 'svg' ? '.svg' : '.txt,.log,.md,.csv'}
+                            accept=".txt,.log,.md,.csv,.svg"
                             on:change={handleFileInput}
                             bind:this={fileInputEl}
                             class="sr-only"
