@@ -29,19 +29,21 @@
 
     const createWorkerV3 = () => new Worker(new URL('./worker-logslimmer.js', import.meta.url), { type: 'module' });
     const createLogRecapWorker = () => new Worker(new URL('./worker-logrecap.js', import.meta.url), { type: 'module' });
+    const createSvgoWorker = () => new Worker(new URL('./worker-svgo.js', import.meta.url), { type: 'module' });
 
-    // Compression mode: 'log' | 'recap'
+    // Compression mode: 'log' | 'recap' | 'svg'
     let compressionMode = 'log'; // Default mode
-    $: mainTitleSuffix = compressionMode === 'recap' ? 'Recap' : 'Slimmer';
-    $: inputTitle = compressionMode === 'recap' ? 'Chat history input' : 'Log input';
+    $: mainTitleSuffix = compressionMode === 'recap' ? 'Recap' : (compressionMode === 'svg' ? 'SVG' : 'Slimmer');
+    $: inputTitle = compressionMode === 'recap' ? 'Chat history input' : (compressionMode === 'svg' ? 'SVG input' : 'Log input');
 
     // Workers
     let workerV3; // Traditional clustering
     let workerLogRecap; // Log recap summarizer
+    let workerSvgo; // SVG optimizer
     let pendingLogRecapCompression = null;
 
     // Worker selection based on mode
-    $: activeWorker = compressionMode === 'recap' ? workerLogRecap : workerV3;
+    $: activeWorker = compressionMode === 'recap' ? workerLogRecap : (compressionMode === 'svg' ? workerSvgo : workerV3);
 
     // Debounce processing to avoid excessive computation while typing
     let debounceTimer = null;
@@ -176,6 +178,16 @@
             console.warn('[app] Log Recap worker not available:', error.message);
         }
 
+        if (workerSvgo) {
+            workerSvgo.terminate();
+        }
+        try {
+            workerSvgo = createSvgoWorker();
+            setupWorkerHandlers(workerSvgo, 'svgo');
+        } catch (error) {
+            console.error('[app] Failed to instantiate SVGO worker:', error);
+        }
+
         if (inputLog.trim().length > 0) {
             compress(inputLog);
         }
@@ -246,6 +258,9 @@
         }
         if (workerLogRecap) {
             workerLogRecap.terminate();
+        }
+        if (workerSvgo) {
+            workerSvgo.terminate();
         }
         if (encoder?.free) {
             encoder.free();
@@ -482,6 +497,13 @@
                             >
                                 Recap
                             </button>
+                            <button
+                                type="button"
+                                class="px-3 py-1 text-xs rounded-md transition-colors {compressionMode === 'svg' ? 'bg-purple-500 text-white' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700'}"
+                                on:click={() => { compressionMode = 'svg'; handleModeChange(); }}
+                            >
+                                SVG
+                            </button>
                         </div>
                     </label>
                     <button
@@ -647,7 +669,7 @@
                             id="fileInput"
                             type="file"
                             multiple
-                            accept=".txt,.log,.md,.csv"
+                            accept={compressionMode === 'svg' ? '.svg' : '.txt,.log,.md,.csv'}
                             on:change={handleFileInput}
                             bind:this={fileInputEl}
                             class="sr-only"
